@@ -6,9 +6,9 @@ Where the build of matra stands, and what comes next. The spec is the build brie
 
 ## Next
 
-**M1 item 8: `wrap`.** From the brief: get break points from linebreak, and remove each one that is inside a grapheme, or inside a syllable in a Brahmic script (done: `src/layout/breaks.ts`). Shape each paragraph one time, and get the width of each segment from the sum of its cluster advances. Put as many segments on each line as fit. If a break point is on a glyph with the `UNSAFE_TO_BREAK` flag, shape that line again to get its true width. A unit that is wider than the line breaks at grapheme boundaries, and that line gets the reason `emergency`.
+**M1 item 9: `fit`.** From the brief: do a binary search on the size, from `minSize` to `maxSize`, to 0.25 px. Find the largest size at which each line fits the width, the line count is not more than `maxLines`, and the line count × size × `lineHeight` (default 1.2) fits the height. If ink goes outside the box, report `overflow-y`. If no size fits, return the `minSize` result with `fits: false`, the findings, and the overflow in pixels. `wrapParagraph()` in `src/layout/wrap.ts` returns the shaped items too, for reuse.
 
-Then 9 `fit`, 10 CLI, 11 golden files, 12 README. At the end of M1: stop, report, wait for the owner.
+Then 10 CLI, 11 golden files, 12 README. At the end of M1: stop, report, wait for the owner.
 
 ## How work is done
 
@@ -52,8 +52,8 @@ Git: work on a branch, push the branch, and open a pull request. Never push to `
 | 5   | `segment`, with syllables for hi, mr, bn and ta       | Done   | `75449ba`, `02d8b23` (bad-break) |
 | 6   | Unicode conformance in CI                             | Done   | `1a53d35`                        |
 | 7   | `measure`                                             | Done   | `f162e7c`                        |
-| 8   | `wrap`                                                | Next   |                                  |
-| 9   | `fit`                                                 |        |                                  |
+| 8   | `wrap`                                                | Done   | (added with item 9)              |
+| 9   | `fit`                                                 | Next   |                                  |
 | 10  | CLI                                                   |        |                                  |
 | 11  | Golden files for the M1 languages                     |        |                                  |
 | 12  | README with examples in six scripts                   |        |                                  |
@@ -77,6 +77,7 @@ Choices the brief does not spell out. Each is also in its commit message.
 - **A syllable is always one or more whole graphemes** (item 5). Tamil க்ஷ is one syllable and two graphemes.
 - **Unicode test files are downloaded, not committed** (item 6), by `pnpm fixtures`, like the fonts. LineBreakTest: 2,193 of 19,338 cases differ, listed with reasons in `test/conformance/known-differences.json`. 1,170 are matra's rule (no break inside a grapheme); 1,023 are because linebreak 2.0.0 has the Unicode 13 rules.
 - **`measure`** (item 7): ascent and descent are positive; ink is positive above and below the baseline. Controls get no width.
+- **`wrap`** (item 8): spaces and controls at the end of a line hang (not in its width; no-break spaces do not hang). A word wider than the line breaks between syllables first, then between graphemes. A line is shaped again when it starts or ends where HarfBuzz marks a break unsafe, inside a cluster (a ligature), at the edge between two shaping items, or at a mark (alone, it gets a dotted circle). A fast-check property checks that each line has the width it has when shaped on its own.
 - **Test strings** write invisible characters (ZWJ, ZWNJ, NBSP, marks with no base) as `\u` escapes.
 
 ## Open questions for the owner

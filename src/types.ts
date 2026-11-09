@@ -77,15 +77,18 @@ export interface Metrics {
 }
 
 /**
- * - `mandatory`: the input has a line break here.
+ * Why a line ends where it does.
+ * - `mandatory`: the input has a line break here, or the text ends.
  * - `opportunity`: a break point allowed by the line-breaking rules.
- * - `emergency`: a unit wider than the line, broken at a grapheme boundary.
+ * - `emergency`: a unit wider than the line, broken at a syllable or grapheme boundary.
  */
 export type LineBreakReason = 'mandatory' | 'opportunity' | 'emergency';
 
+/** One line of wrapped text. The lines cover the whole text, newlines included. */
 export interface Line {
   start: number;
   end: number;
+  /** In pixels, without the spaces at the end of the line, which hang. */
   width: number;
   reason: LineBreakReason;
 }
