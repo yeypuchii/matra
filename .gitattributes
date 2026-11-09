@@ -1,0 +1,11 @@
+* text=auto eol=lf
+
+# Test data keeps its exact bytes: no line-ending conversion.
+fixtures/text/** -text
+test/conformance/** -text
+test/golden/** -text
+
+*.ttf binary
+*.otf binary
+*.ttc binary
+*.woff2 binary

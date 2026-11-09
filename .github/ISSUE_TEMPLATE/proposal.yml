@@ -1,0 +1,23 @@
+name: Proposal
+description: A new check, a language rule, an engine adapter, or a change to the API.
+labels: ["proposal", "triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What goes wrong today, for whom, and in which scripts or languages.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What matra should do. Name the specification it comes from, if there is one (Unicode, OpenType, CSS, a language standard).
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples
+      description: Strings, fonts and the result you expect.

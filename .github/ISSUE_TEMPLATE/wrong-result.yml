@@ -1,0 +1,66 @@
+name: Wrong result
+description: matra misses a fault, reports a fault that is not there, or measures or wraps text wrongly.
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. The shortest string that shows the problem helps most. Do not paste private or personal text: change the words, but keep the characters that cause the fault.
+  - type: input
+    id: version
+    attributes:
+      label: matra version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: runtime
+    attributes:
+      label: Runtime and version
+      placeholder: "Node 24.11, Bun 1.4, Deno 2.9, Chrome 140 ..."
+    validations:
+      required: true
+  - type: textarea
+    id: text
+    attributes:
+      label: Text
+      description: The string. If it has invisible characters (ZWJ, ZWNJ, variation selectors), also give the code points, for example U+0915 U+094D U+200D.
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: lang
+    attributes:
+      label: lang
+      placeholder: "hi"
+    validations:
+      required: true
+  - type: textarea
+    id: fonts
+    attributes:
+      label: Fonts
+      description: The fonts in the stack, in order, with their versions and a link to each. matra cannot test a font that it cannot get.
+    validations:
+      required: true
+  - type: textarea
+    id: call
+    attributes:
+      label: Call
+      description: The function and the options, or the CLI command.
+      render: ts
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected
+      description: What should happen, and how you know. For example, a screenshot from a browser or a renderer that shows the text correctly.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual
+      description: What matra returned.
+    validations:
+      required: true
