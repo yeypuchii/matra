@@ -1,6 +1,8 @@
 import { isNeutral } from '../font/runs.ts';
 import { internals, type StackInternals } from '../font/stack.ts';
 import { assertOptions, assertText, checkLang } from '../options.ts';
+import { graphemeBoundaries } from '../segment/intl.ts';
+import { syllableBoundaries } from '../segment/syllables.ts';
 import { type ShapedItem, shapeItems } from '../shape/shape.ts';
 import type { CheckOptions, Finding, FindingCode } from '../types.ts';
 
@@ -32,13 +34,55 @@ export function check(text: string, options: CheckOptions): Finding[] {
   assertOptions(options, 'check');
   const stack = internals(options.fonts);
   const lang = checkLang(options.lang);
-  const findings: Finding[] = [];
-  for (const [start, contentEnd] of hardBreakParagraphs(text)) {
+  const paragraphs = hardBreakParagraphs(text);
+  const findings: Finding[] = badBreakFindings(text, lang, paragraphs);
+  for (const [start, contentEnd] of paragraphs) {
     findings.push(
       ...shapedFindings(stack, text, shapeItems(stack, text, lang, undefined, start, contentEnd)),
     );
   }
   return sortFindings(findings);
+}
+
+/** How far on each side of a line break to look for the grapheme or syllable around it. */
+const BAD_BREAK_WINDOW = 64;
+
+/**
+ * bad-break: a mandatory break in the input that is inside a grapheme or a syllable. The text
+ * on the two sides of the break is joined; if the join is not a boundary of both, the break
+ * cuts a unit in two. The finding spans the unit, with the break characters in it.
+ */
+export function badBreakFindings(
+  text: string,
+  lang: string,
+  paragraphs: readonly (readonly [number, number, number])[],
+): Finding[] {
+  const findings: Finding[] = [];
+  for (let p = 0; p + 1 < paragraphs.length; p++) {
+    const [start, contentEnd, end] = paragraphs[p] as [number, number, number];
+    const nextContentEnd = (paragraphs[p + 1] as [number, number, number])[1];
+    const left = text.slice(Math.max(start, contentEnd - BAD_BREAK_WINDOW), contentEnd);
+    const right = text.slice(end, Math.min(nextContentEnd, end + BAD_BREAK_WINDOW));
+    if (left.length === 0 || right.length === 0) continue;
+
+    const joined = left + right;
+    const at = left.length;
+    const graphemes = graphemeBoundaries(joined, lang);
+    const syllables = syllableBoundaries(joined, lang);
+    const cut = graphemes.includes(at) ? syllables : graphemes;
+    if (cut.includes(at)) continue;
+
+    const unitStart = cut.findLast((b) => b < at) ?? 0;
+    const unitEnd = cut.find((b) => b > at) ?? joined.length;
+    const unit = cut === graphemes ? 'grapheme' : 'syllable';
+    findings.push({
+      code: 'bad-break',
+      start: contentEnd - (at - unitStart),
+      end: end + (unitEnd - at),
+      message: `The line break at offset ${contentEnd} is inside the ${unit} ${quote(joined, unitStart, unitEnd)}.`,
+    });
+  }
+  return findings;
 }
 
 /** The glyph findings and the font-fallback findings of shaped items. Not sorted. */

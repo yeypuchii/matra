@@ -74,9 +74,11 @@ describe('check: broken-cluster', () => {
     expect(brief(check('\u0301a', { fonts: latin, lang: 'en' }))).toEqual([
       { code: 'broken-cluster', start: 0, end: 1, font: 0 },
     ]);
-    expect(brief(check('a\n\u0301b', { fonts: latin, lang: 'en' }))).toEqual([
-      { code: 'broken-cluster', start: 2, end: 3, font: 0 },
-    ]);
+    expect(
+      brief(check('a\n\u0301b', { fonts: latin, lang: 'en' })).filter(
+        (f) => f.code !== 'bad-break',
+      ),
+    ).toEqual([{ code: 'broken-cluster', start: 2, end: 3, font: 0 }]);
   });
 
   it('does not report a dotted circle that is in the input', () => {
@@ -122,6 +124,36 @@ describe('check: font-fallback', () => {
       { code: 'font-fallback', start: 6, end: 11, font: 1 },
       { code: 'font-fallback', start: 13, end: 18, font: 1 },
     ]);
+  });
+});
+
+describe('check: bad-break', () => {
+  it('reports a newline inside a Devanagari conjunct (one grapheme)', () => {
+    const findings = check('\u0915\u094d\n\u0937', { fonts: devanagari, lang: 'hi' });
+    expect(brief(findings)).toEqual([{ code: 'bad-break', start: 0, end: 4 }]);
+    expect(findings[0]?.message).toContain('offset 2');
+  });
+
+  it('reports a newline inside a Tamil syllable that is two graphemes', () => {
+    expect(brief(check('\u0b95\u0bcd\n\u0bb7', { fonts: tamil, lang: 'ta' }))).toEqual([
+      { code: 'bad-break', start: 0, end: 4 },
+    ]);
+  });
+
+  it('reports a newline before a mark, with the broken cluster it makes', () => {
+    expect(brief(check('a\n\u0301b', { fonts: latin, lang: 'en' }))).toEqual([
+      { code: 'bad-break', start: 0, end: 3 },
+      { code: 'broken-cluster', start: 2, end: 3, font: 0 },
+    ]);
+    expect(brief(check('\u0915\r\n\u093f', { fonts: devanagari, lang: 'hi' }))).toEqual([
+      { code: 'bad-break', start: 0, end: 4 },
+      { code: 'broken-cluster', start: 3, end: 4, font: 0 },
+    ]);
+  });
+
+  it('does not report a newline between words, syllables or empty lines', () => {
+    expect(check('hello\nworld', { fonts: latin, lang: 'en' })).toEqual([]);
+    expect(check('नमस्ते\nदुनिया\n\nक\n', { fonts: devanagari, lang: 'hi' })).toEqual([]);
   });
 });
 
