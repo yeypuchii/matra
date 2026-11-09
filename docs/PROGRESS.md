@@ -11,7 +11,7 @@ Where the build of matra stands, and what comes next. The spec is the build brie
 1. Review and merge PR #2 (the owner approved the hi, mr, bn and ta golden files and kept linebreak on 2026-11-09).
 2. Publish 0.1.0 (`pnpm changeset version`, review, `pnpm release`).
 
-Then **M2 item 1: `matra/captions`** (SRT, WebVTT, ASS), with a design note in `docs/decisions/` before the code (required from M2 on).
+Then **M2 item 1: `@yeypuchi/matra/captions`** (SRT, WebVTT, ASS), with a design note in `docs/decisions/` before the code (required from M2 on).
 
 M1 benchmark (`pnpm bench`, 2026-11-09, node v24.22.1, AMD EPYC 7B12; 1,030-character Hindi paragraph, 16 px, width 400 px): HarfBuzz shaping 934 µs (the reference), `check` 2,933 µs (3.1 × shaping), `wrap` 1,906 µs (2.0 ×), `fit` 3,818 µs (4.1 ×). The M0 baseline has only the reference, on another CPU (Intel Xeon, 1,601 µs), so the × shape column is the one to compare. The baseline file is not changed.
 
@@ -67,7 +67,7 @@ M1 languages (Tier 1): Latin (en, nl, de, fr, pl, tr, vi), Greek (el), Cyrillic 
 
 ### Later milestones, in short
 
-- **M2 Adapters.** `matra/captions`: SRT, WebVTT and ASS, with cue splits only at legal break points. For ASS, `Fontsize` = em size × (usWinAscent + usWinDescent) / upem, checked against libass through ffmpeg in a test. `matra/svg`: glyph paths from `font.glyphToPath`, for engines that do not shape complex scripts (satori). Visual tests with resvg and pixelmatch; a browser smoke test with Playwright. Dev dependencies: `@resvg/resvg-js`, `pixelmatch`, Playwright.
+- **M2 Adapters.** `@yeypuchi/matra/captions`: SRT, WebVTT and ASS, with cue splits only at legal break points. For ASS, `Fontsize` = em size × (usWinAscent + usWinDescent) / upem, checked against libass through ffmpeg in a test. `@yeypuchi/matra/svg`: glyph paths from `font.glyphToPath`, for engines that do not shape complex scripts (satori). Visual tests with resvg and pixelmatch; a browser smoke test with Playwright. Dev dependencies: `@resvg/resvg-js`, `pixelmatch`, Playwright.
 - **M3 Tier 1 breadth.** Bidi with `bidi-js` (ar, he). Thai word breaks from `Intl.Segmenter`. CJK line-start and line-end rules, CSS `line-break` strict, normal and loose. Hyphenation with `hyphen`, permissive pattern licences only. Case rules: tr and az i, nl IJ, el accents in uppercase, de ß. `locl` checks: sr and ru, bg, mr and hi, zh and ja.
 - **M4 Print.** A separate package, `matra-print`: HTML to a book PDF through Paged.js, with bleed, crop marks, and a spine width from the page count and the paper. It runs `check` on all text first. It may use a headless browser. Vivliostyle CLI (AGPL-3.0) only as an external program.
 - **1.0.** Freeze the API and the finding codes under semantic versioning. Publish a docs site.
@@ -93,7 +93,8 @@ None open. Answered by the owner on 2026-11-09:
 
 - The golden files for hi, mr, bn and ta are approved.
 - linebreak stays. Its Unicode 13 differences are listed in `test/conformance/known-differences.json`; rerun `pnpm conformance:update` when linebreak or the runtime Unicode version changes.
+- The npm name is `@yeypuchi/matra`: npm refused the plain name `matra` at publish ("too similar to existing packages matea2, metro"). The CLI command stays `matra`; the brief's `matra`, `matra/captions` and `matra/svg` exports are `@yeypuchi/matra`, `@yeypuchi/matra/captions` and `@yeypuchi/matra/svg`.
 
 ## Owner steps (brief, section 1)
 
-Not checked in the brief yet: the trademark search for "matra" in class 9; publish 0.0.0 to reserve the name (npm had no `matra` package on 2026-11-09); the application.
+Not checked in the brief yet: the trademark search for "matra" in class 9; the application. Reserving `matra` on npm is moot: npm does not allow the plain name.

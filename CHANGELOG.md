@@ -1,4 +1,4 @@
-# matra
+# @yeypuchi/matra
 
 ## 0.1.0
 
