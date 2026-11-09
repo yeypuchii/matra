@@ -1,0 +1,176 @@
+{
+  "lang": "bn",
+  "fonts": ["NotoSansBengali-Regular.ttf", "NotoSans-Regular.ttf"],
+  "settings": {
+    "size": 16,
+    "widths": [80, 160, 320],
+    "box": {
+      "width": 240,
+      "height": 96
+    },
+    "minSize": 8,
+    "maxSize": 48
+  },
+  "cases": [
+    {
+      "text": "পৃথিবীতে জন্মগ্রহণ করিয়া ভাষা শিক্ষা করিতে সে কেবল একটি বৎসর কাল ব্যয় করিয়াছিল, তাহার পর হইতে যতক্ষণ সে জাগিয়া থাকে এক মুহূর্ত মৌনভাবে নষ্ট করে না।",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 9, 56.912, "opportunity"],
+          [9, 19, 55.968, "opportunity"],
+          [19, 31, 74.88, "opportunity"],
+          [31, 38, 33.152, "opportunity"],
+          [38, 47, 63.696, "opportunity"],
+          [47, 52, 39.92, "opportunity"],
+          [52, 62, 79.488, "opportunity"],
+          [62, 72, 56.896, "opportunity"],
+          [72, 83, 70.96, "opportunity"],
+          [83, 92, 63.056, "opportunity"],
+          [92, 97, 34.176, "opportunity"],
+          [97, 107, 64.896, "opportunity"],
+          [107, 115, 46.912, "opportunity"],
+          [115, 123, 62.032, "opportunity"],
+          [123, 131, 29.648, "opportunity"],
+          [131, 139, 60.24, "opportunity"],
+          [139, 151, 74.624, "mandatory"]
+        ],
+        "160": [
+          [0, 19, 117.04, "opportunity"],
+          [19, 38, 112.192, "opportunity"],
+          [38, 57, 149.552, "opportunity"],
+          [57, 72, 98.768, "opportunity"],
+          [72, 92, 138.176, "opportunity"],
+          [92, 115, 154.304, "opportunity"],
+          [115, 131, 95.84, "opportunity"],
+          [131, 151, 139.024, "mandatory"]
+        ],
+        "320": [
+          [0, 47, 301.248, "opportunity"],
+          [47, 89, 301.808, "opportunity"],
+          [89, 131, 279.456, "opportunity"],
+          [131, 151, 139.024, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 16,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0.84,
+        "lines": [[0, 38], [38, 66], [66, 97], [97, 131], [131, 151]],
+        "findings": [["overflow-y", 0, 37]]
+      }
+    },
+    {
+      "text": "সে তখন আমার লিখিবার টেবিলের পার্শ্বে আমার পায়ের কাছে বসিয়া নিজের দুই হাঁটু এবং হাত লইয়া অতিদ্রুত উচ্চারণে ‘আগ্‌ডুম বাগ্‌ডুম’ খেলিতে আরম্ভ করিয়া দিল।",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 7, 51.424, "opportunity"],
+          [7, 12, 42.128, "opportunity"],
+          [12, 20, 54.112, "opportunity"],
+          [20, 28, 55.328, "opportunity"],
+          [28, 42, 78.032, "opportunity"],
+          [42, 54, 77.888, "opportunity"],
+          [54, 61, 38.032, "opportunity"],
+          [61, 71, 64.544, "opportunity"],
+          [71, 81, 53.952, "opportunity"],
+          [81, 91, 62.784, "opportunity"],
+          [91, 100, 54.24, "opportunity"],
+          [100, 109, 54.656, "opportunity"],
+          [109, 118, 53.824, "opportunity"],
+          [118, 128, 49.072, "opportunity"],
+          [128, 135, 48.752, "opportunity"],
+          [135, 141, 39.936, "opportunity"],
+          [141, 152, 76, "mandatory"]
+        ],
+        "160": [
+          [0, 20, 155.984, "opportunity"],
+          [20, 42, 137.52, "opportunity"],
+          [42, 61, 120.08, "opportunity"],
+          [61, 85, 150.928, "opportunity"],
+          [85, 109, 151.728, "opportunity"],
+          [109, 135, 159.968, "opportunity"],
+          [135, 152, 120.096, "mandatory"]
+        ],
+        "320": [
+          [0, 42, 297.664, "opportunity"],
+          [42, 91, 313.84, "opportunity"],
+          [91, 135, 277.184, "opportunity"],
+          [135, 152, 120.096, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 16,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0.92,
+        "lines": [[0, 28], [28, 61], [61, 91], [91, 128], [128, 152]],
+        "findings": [["overflow-y", 0, 27]]
+      }
+    },
+    {
+      "text": "ক্ষমা, স্ত্রী, র‍্যাব, উৎসব, কৌতুক, জ্ঞান আর রবীন্দ্রনাথ।",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 15, 55.456, "opportunity"],
+          [15, 29, 79.952, "opportunity"],
+          [29, 36, 51.456, "opportunity"],
+          [36, 45, 61.152, "opportunity"],
+          [45, 57, 67.472, "mandatory"]
+        ],
+        "160": [
+          [0, 29, 139.568, "opportunity"],
+          [29, 45, 116.768, "opportunity"],
+          [45, 57, 67.472, "mandatory"]
+        ],
+        "320": [[0, 45, 260.496, "opportunity"], [45, 57, 67.472, "mandatory"]]
+      },
+      "fit": {
+        "size": 26.5,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 1.524,
+        "lines": [[0, 29], [29, 45], [45, 57]],
+        "findings": [["overflow-y", 0, 28]]
+      }
+    },
+    {
+      "text": "একা কার: ি আর ো; হসন্তের পরে: ক্‍ষ।",
+      "findings": [
+        {
+          "code": "broken-cluster",
+          "start": 8,
+          "end": 10,
+          "font": 0
+        },
+        {
+          "code": "broken-cluster",
+          "start": 13,
+          "end": 15,
+          "font": 0
+        }
+      ],
+      "lines": {
+        "80": [
+          [0, 4, 28.864, "opportunity"],
+          [4, 11, 47.568, "opportunity"],
+          [11, 17, 54.72, "opportunity"],
+          [17, 25, 45.92, "opportunity"],
+          [25, 35, 64.208, "mandatory"]
+        ],
+        "160": [[0, 17, 139.472, "opportunity"], [17, 35, 114.288, "mandatory"]],
+        "320": [[0, 35, 257.92, "mandatory"]]
+      },
+      "fit": {
+        "size": 27.5,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 1.141,
+        "lines": [[0, 17], [17, 35]],
+        "findings": [["overflow-y", 0, 16], ["broken-cluster", 8, 10], ["broken-cluster", 13, 15]]
+      }
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "lang": "hi",
+  "fonts": ["NotoSansDevanagari-Regular.ttf", "NotoSans-Regular.ttf"],
+  "settings": {
+    "size": 16,
+    "widths": [80, 160, 320],
+    "box": {
+      "width": 240,
+      "height": 96
+    },
+    "minSize": 8,
+    "maxSize": 48
+  },
+  "cases": [
+    {
+      "text": "वृक्षों पर कुछ अजीब हरियाली है, खेतों में कुछ अजीब रौनक है, आसमान पर कुछ अजीब लालिमा है। आज का सूर्य देखो, कितना प्यारा, कितना शीतल है, मानों संसार को ईद की बधाई दे रहा है।",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 15, 71.968, "opportunity"],
+          [15, 20, 37.376, "opportunity"],
+          [20, 32, 64.544, "opportunity"],
+          [32, 46, 67.744, "opportunity"],
+          [46, 56, 73.392, "opportunity"],
+          [56, 66, 66.704, "opportunity"],
+          [66, 73, 43.296, "opportunity"],
+          [73, 78, 37.376, "opportunity"],
+          [78, 89, 62.416, "opportunity"],
+          [89, 101, 73.072, "opportunity"],
+          [101, 113, 72.752, "opportunity"],
+          [113, 127, 75.952, "opportunity"],
+          [127, 136, 51.936, "opportunity"],
+          [136, 148, 63.216, "opportunity"],
+          [148, 157, 57.536, "opportunity"],
+          [157, 169, 66.976, "opportunity"],
+          [169, 172, 14.56, "mandatory"]
+        ],
+        "160": [
+          [0, 20, 113.504, "opportunity"],
+          [20, 46, 136.448, "opportunity"],
+          [46, 66, 144.256, "opportunity"],
+          [66, 89, 151.408, "opportunity"],
+          [89, 113, 149.984, "opportunity"],
+          [113, 136, 132.048, "opportunity"],
+          [136, 157, 124.912, "opportunity"],
+          [157, 172, 85.696, "mandatory"]
+        ],
+        "320": [
+          [0, 51, 295.648, "opportunity"],
+          [51, 95, 311.264, "opportunity"],
+          [95, 148, 300.592, "opportunity"],
+          [148, 172, 147.392, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 16,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0.832,
+        "lines": [[0, 42], [42, 73], [73, 107], [107, 142], [142, 172]],
+        "findings": [["overflow-y", 0, 41]]
+      }
+    },
+    {
+      "text": "वह क्या जानें कि अब्बाजान क्यों बदहवास चौधरी कायमअली के घर दौड़े जा रहे हैं। उन्हें क्या खबर कि चौधरी आज आँखें बदल लें, तो यह सारी ईद मुहर्रम हो जाय।",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 14, 72.592, "opportunity"],
+          [14, 26, 76.624, "opportunity"],
+          [26, 39, 76.128, "opportunity"],
+          [39, 45, 34.832, "opportunity"],
+          [45, 56, 78.944, "opportunity"],
+          [56, 68, 61.536, "opportunity"],
+          [68, 84, 59.968, "opportunity"],
+          [84, 96, 75.504, "opportunity"],
+          [96, 105, 67.216, "opportunity"],
+          [105, 115, 62.08, "opportunity"],
+          [115, 126, 54.496, "opportunity"],
+          [126, 134, 46.16, "opportunity"],
+          [134, 145, 50.976, "opportunity"],
+          [145, 149, 31.36, "mandatory"]
+        ],
+        "160": [
+          [0, 26, 153.376, "opportunity"],
+          [26, 45, 115.12, "opportunity"],
+          [45, 68, 144.64, "opportunity"],
+          [68, 96, 139.632, "opportunity"],
+          [96, 120, 152.752, "opportunity"],
+          [120, 145, 140.656, "opportunity"],
+          [145, 149, 31.36, "mandatory"]
+        ],
+        "320": [
+          [0, 45, 272.656, "opportunity"],
+          [45, 96, 288.432, "opportunity"],
+          [96, 145, 297.568, "opportunity"],
+          [145, 149, 31.36, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 16.25,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0.845,
+        "lines": [[0, 39], [39, 77], [77, 111], [111, 149]],
+        "findings": [["overflow-y", 0, 38]]
+      }
+    },
+    {
+      "text": "क्षत्रिय, त्र्यंबक, ज्ञान, श्रृंगार, शुद्ध, ब्रह्म, कर्म, ज़्यादा, ऑफ़िस और अनिरुद्ध रॉयचौधरी।",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 10, 38.016, "opportunity"],
+          [10, 27, 71.552, "opportunity"],
+          [27, 44, 67.424, "opportunity"],
+          [44, 58, 56.544, "opportunity"],
+          [58, 67, 39.504, "opportunity"],
+          [67, 76, 70.736, "opportunity"],
+          [76, 85, 47.6, "opportunity"],
+          [85, 94, 60.864, "mandatory"]
+        ],
+        "160": [
+          [0, 37, 153.2, "opportunity"],
+          [37, 67, 132.32, "opportunity"],
+          [67, 85, 122.496, "opportunity"],
+          [85, 94, 60.864, "mandatory"]
+        ],
+        "320": [[0, 67, 289.68, "opportunity"], [67, 94, 187.52, "mandatory"]]
+      },
+      "fit": {
+        "size": 21.25,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 1.105,
+        "lines": [[0, 37], [37, 73], [73, 94]],
+        "findings": [["overflow-y", 0, 36]]
+      }
+    },
+    {
+      "text": "इस पंक्ति में अकेली मात्रा ि है, और यहाँ हलंत के बाद ZWJ है: क्‍ष।",
+      "findings": [
+        {
+          "code": "broken-cluster",
+          "start": 26,
+          "end": 28,
+          "font": 0
+        }
+      ],
+      "lines": {
+        "80": [
+          [0, 14, 67.488, "opportunity"],
+          [14, 20, 39.504, "opportunity"],
+          [20, 33, 60.096, "opportunity"],
+          [33, 41, 48.992, "opportunity"],
+          [41, 53, 70.848, "opportunity"],
+          [53, 66, 74.032, "mandatory"]
+        ],
+        "160": [
+          [0, 29, 158.464, "opportunity"],
+          [29, 53, 140.944, "opportunity"],
+          [53, 66, 74.032, "mandatory"]
+        ],
+        "320": [[0, 53, 303.568, "opportunity"], [53, 66, 74.032, "mandatory"]]
+      },
+      "fit": {
+        "size": 26.25,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 1.365,
+        "lines": [[0, 20], [20, 46], [46, 66]],
+        "findings": [["overflow-y", 0, 19], ["broken-cluster", 26, 28]]
+      }
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "lang": "fr",
+  "fonts": ["NotoSans-Regular.ttf"],
+  "settings": {
+    "size": 16,
+    "widths": [80, 160, 320],
+    "box": {
+      "width": 240,
+      "height": 96
+    },
+    "minSize": 8,
+    "maxSize": 48
+  },
+  "cases": [
+    {
+      "text": "À l'un des plus grands orateurs qui honorent l'Angleterre, succédait donc ce Phileas Fogg, personnage énigmatique, dont on ne savait rien, sinon que c'était un fort galant homme et l'un des plus beaux gentlemen de la haute société anglaise.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 11, 72.096, "opportunity"],
+          [11, 16, 31.52, "opportunity"],
+          [16, 23, 52.496, "opportunity"],
+          [23, 32, 63.904, "opportunity"],
+          [32, 36, 23.856, "opportunity"],
+          [36, 45, 70.112, "opportunity"],
+          [45, 56, 77.728, "emergency"],
+          [56, 59, 13.312, "opportunity"],
+          [59, 69, 70.656, "opportunity"],
+          [69, 77, 57.952, "opportunity"],
+          [77, 85, 53.488, "opportunity"],
+          [85, 91, 41.952, "opportunity"],
+          [91, 99, 71.568, "emergency"],
+          [99, 102, 18.864, "opportunity"],
+          [102, 111, 76.56, "emergency"],
+          [111, 120, 62.544, "opportunity"],
+          [120, 126, 42.64, "opportunity"],
+          [126, 133, 43.648, "opportunity"],
+          [133, 145, 79.344, "opportunity"],
+          [145, 157, 77.232, "opportunity"],
+          [157, 165, 51.504, "opportunity"],
+          [165, 172, 47.584, "opportunity"],
+          [172, 181, 77.472, "opportunity"],
+          [181, 190, 57.712, "opportunity"],
+          [190, 195, 31.52, "opportunity"],
+          [195, 201, 46.192, "opportunity"],
+          [201, 209, 71.664, "emergency"],
+          [209, 217, 50.176, "opportunity"],
+          [217, 223, 43.552, "opportunity"],
+          [223, 231, 52.976, "opportunity"],
+          [231, 240, 66.912, "mandatory"]
+        ],
+        "160": [
+          [0, 16, 107.776, "opportunity"],
+          [16, 36, 148.576, "opportunity"],
+          [36, 45, 70.112, "opportunity"],
+          [45, 59, 90.72, "opportunity"],
+          [59, 77, 132.768, "opportunity"],
+          [77, 91, 99.6, "opportunity"],
+          [91, 102, 90.432, "opportunity"],
+          [102, 120, 139.104, "opportunity"],
+          [120, 139, 128.544, "opportunity"],
+          [139, 160, 146.576, "opportunity"],
+          [160, 178, 141.984, "opportunity"],
+          [178, 195, 112.352, "opportunity"],
+          [195, 214, 154.928, "opportunity"],
+          [214, 231, 117.952, "opportunity"],
+          [231, 240, 66.912, "mandatory"]
+        ],
+        "320": [
+          [0, 36, 260.512, "opportunity"],
+          [36, 77, 301.92, "opportunity"],
+          [77, 115, 298.112, "opportunity"],
+          [115, 160, 318.624, "opportunity"],
+          [160, 201, 308.848, "opportunity"],
+          [201, 240, 297.76, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 12,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 36], [36, 77], [77, 115], [115, 160], [160, 201], [201, 240]],
+        "findings": []
+      }
+    },
+    {
+      "text": "Passepartout eût réfléchi pendant un siècle, qu'il n'aurait jamais deviné de quelle mission l'agent avait été chargé. Jamais il n'eût imaginé que Phileas Fogg fût «filé», à la façon d'un voleur, autour du globe terrestre.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 9, 74.208, "emergency"],
+          [9, 17, 54.192, "opportunity"],
+          [17, 26, 55.664, "opportunity"],
+          [26, 34, 63.232, "opportunity"],
+          [34, 45, 69.872, "opportunity"],
+          [45, 51, 31.584, "opportunity"],
+          [51, 60, 56.72, "opportunity"],
+          [60, 67, 48.832, "opportunity"],
+          [67, 77, 72.736, "opportunity"],
+          [77, 84, 46.032, "opportunity"],
+          [84, 92, 58.112, "opportunity"],
+          [92, 100, 50.592, "opportunity"],
+          [100, 110, 63.968, "opportunity"],
+          [110, 118, 56.144, "opportunity"],
+          [118, 128, 61.488, "opportunity"],
+          [128, 134, 37.056, "opportunity"],
+          [134, 142, 60.944, "opportunity"],
+          [142, 146, 28.752, "opportunity"],
+          [146, 154, 53.488, "opportunity"],
+          [154, 163, 62.992, "opportunity"],
+          [163, 176, 73.76, "opportunity"],
+          [176, 187, 78.624, "opportunity"],
+          [187, 195, 49.184, "opportunity"],
+          [195, 205, 74.704, "opportunity"],
+          [205, 211, 42.512, "opportunity"],
+          [211, 221, 69.76, "mandatory"]
+        ],
+        "160": [
+          [0, 17, 128.4, "opportunity"],
+          [17, 37, 146.992, "opportunity"],
+          [37, 60, 142.56, "opportunity"],
+          [60, 77, 125.728, "opportunity"],
+          [77, 92, 108.304, "opportunity"],
+          [92, 110, 118.72, "opportunity"],
+          [110, 128, 121.792, "opportunity"],
+          [128, 146, 135.072, "opportunity"],
+          [146, 163, 120.64, "opportunity"],
+          [163, 187, 156.544, "opportunity"],
+          [187, 205, 128.048, "opportunity"],
+          [205, 221, 116.432, "mandatory"]
+        ],
+        "320": [
+          [0, 37, 279.552, "opportunity"],
+          [37, 77, 272.448, "opportunity"],
+          [77, 118, 291.488, "opportunity"],
+          [118, 159, 300.192, "opportunity"],
+          [159, 205, 314.08, "opportunity"],
+          [205, 221, 116.432, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 13.25,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 37], [37, 77], [77, 110], [110, 146], [146, 187], [187, 221]],
+        "findings": []
+      }
+    },
+    {
+      "text": "« Où est l’œuvre ? » demanda Noël ; « ŒUVRES COMPLÈTES », répondit Zoé à l’Hôtel-Dieu.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 9, 61.312, "opportunity"],
+          [9, 21, 76.336, "opportunity"],
+          [21, 29, 71.504, "opportunity"],
+          [29, 36, 41.936, "opportunity"],
+          [36, 45, 76.08, "opportunity"],
+          [45, 52, 72.656, "emergency"],
+          [52, 58, 34.272, "opportunity"],
+          [58, 67, 64.464, "opportunity"],
+          [67, 73, 40.992, "opportunity"],
+          [73, 81, 52.544, "opportunity"],
+          [81, 86, 39.008, "mandatory"]
+        ],
+        "160": [
+          [0, 21, 141.808, "opportunity"],
+          [21, 36, 117.6, "opportunity"],
+          [36, 45, 76.08, "opportunity"],
+          [45, 58, 106.928, "opportunity"],
+          [58, 73, 109.616, "opportunity"],
+          [73, 86, 91.552, "mandatory"]
+        ],
+        "320": [
+          [0, 36, 263.568, "opportunity"],
+          [36, 73, 300.944, "opportunity"],
+          [73, 86, 91.552, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 19.25,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 21], [21, 45], [45, 67], [67, 86]],
+        "findings": []
+      }
+    }
+  ]
+}

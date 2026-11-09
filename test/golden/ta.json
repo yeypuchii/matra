@@ -1,0 +1,209 @@
+{
+  "lang": "ta",
+  "fonts": ["NotoSansTamil-Regular.ttf", "NotoSans-Regular.ttf"],
+  "settings": {
+    "size": 16,
+    "widths": [80, 160, 320],
+    "box": {
+      "width": 240,
+      "height": 96
+    },
+    "minSize": 8,
+    "maxSize": 48
+  },
+  "cases": [
+    {
+      "text": "ஒரு ஜாதி ஓர் உயிர்: பாரத நாட்டிலுள்ள முப்பது கோடி ஜனங்களும் ஒரு ஜாதி. வகுப்புகள் இருக்கலாம்; பிரிவுகள் இருக்கலாகாது.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 9, 80, "opportunity"],
+          [9, 13, 26, "opportunity"],
+          [13, 20, 51.2, "opportunity"],
+          [20, 25, 45.408, "opportunity"],
+          [25, 33, 66.864, "emergency"],
+          [33, 37, 33.744, "opportunity"],
+          [37, 45, 60.464, "opportunity"],
+          [45, 50, 47.712, "opportunity"],
+          [50, 55, 66, "emergency"],
+          [55, 64, 74.192, "opportunity"],
+          [64, 70, 47.552, "opportunity"],
+          [70, 78, 71.792, "emergency"],
+          [78, 81, 17.12, "opportunity"],
+          [81, 87, 61.232, "emergency"],
+          [87, 93, 44.464, "opportunity"],
+          [93, 103, 78.096, "opportunity"],
+          [103, 109, 61.232, "emergency"],
+          [109, 116, 70.192, "mandatory"]
+        ],
+        "160": [
+          [0, 13, 110.16, "opportunity"],
+          [13, 25, 100.768, "opportunity"],
+          [25, 37, 100.608, "opportunity"],
+          [37, 50, 112.336, "opportunity"],
+          [50, 64, 140.192, "opportunity"],
+          [64, 81, 140.624, "opportunity"],
+          [81, 93, 105.696, "opportunity"],
+          [93, 103, 78.096, "opportunity"],
+          [103, 116, 131.424, "mandatory"]
+        ],
+        "320": [
+          [0, 37, 319.856, "opportunity"],
+          [37, 70, 308.4, "opportunity"],
+          [70, 103, 281.024, "opportunity"],
+          [103, 116, 131.424, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 16,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 25], [25, 50], [50, 70], [70, 93], [93, 116]],
+        "findings": []
+      }
+    },
+    {
+      "text": "ஆனந்தகரமான கடற்காற்று, நான் படுத்திருந்த முன்னறையிலே நான்கு பக்கங்களிலிருந்தும், கண்ணாடிச் சாளரங்களின் மூலமாகவும், புறக்கதவு நிலைகளின் மூலமாகவும், வந்து நிரம்பிய வண்ணமாக இருந்தது.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 6, 78.88, "emergency"],
+          [6, 11, 53.456, "opportunity"],
+          [11, 17, 61.632, "emergency"],
+          [17, 23, 36.064, "opportunity"],
+          [23, 28, 42.112, "opportunity"],
+          [28, 37, 76.096, "emergency"],
+          [37, 41, 25.824, "opportunity"],
+          [41, 46, 57.104, "emergency"],
+          [46, 53, 79.792, "opportunity"],
+          [53, 60, 58.64, "opportunity"],
+          [60, 67, 68.752, "emergency"],
+          [67, 73, 58.464, "emergency"],
+          [73, 81, 47.808, "opportunity"],
+          [81, 86, 75.696, "emergency"],
+          [86, 91, 24.32, "opportunity"],
+          [91, 98, 78.576, "emergency"],
+          [98, 103, 41.056, "opportunity"],
+          [103, 109, 72.368, "emergency"],
+          [109, 115, 34.432, "opportunity"],
+          [115, 122, 65.952, "emergency"],
+          [122, 125, 16.704, "opportunity"],
+          [125, 130, 64.784, "emergency"],
+          [130, 135, 41.056, "opportunity"],
+          [135, 141, 72.368, "emergency"],
+          [141, 147, 34.432, "opportunity"],
+          [147, 153, 46.784, "opportunity"],
+          [153, 162, 72.832, "opportunity"],
+          [162, 166, 68.96, "emergency"],
+          [166, 170, 36.448, "opportunity"],
+          [170, 178, 78.112, "emergency"],
+          [178, 179, 4.288, "mandatory"]
+        ],
+        "160": [
+          [0, 11, 132.336, "opportunity"],
+          [11, 28, 143.616, "opportunity"],
+          [28, 41, 101.92, "opportunity"],
+          [41, 53, 136.4, "opportunity"],
+          [53, 60, 58.64, "opportunity"],
+          [60, 77, 157.296, "emergency"],
+          [77, 91, 121.904, "opportunity"],
+          [91, 103, 119.632, "opportunity"],
+          [103, 115, 106.8, "opportunity"],
+          [115, 125, 82.656, "opportunity"],
+          [125, 135, 105.84, "opportunity"],
+          [135, 153, 157.744, "opportunity"],
+          [153, 162, 72.832, "opportunity"],
+          [162, 170, 105.408, "opportunity"],
+          [170, 179, 82.4, "mandatory"]
+        ],
+        "320": [
+          [0, 28, 280.112, "opportunity"],
+          [28, 60, 305.28, "opportunity"],
+          [60, 91, 279.2, "opportunity"],
+          [91, 125, 317.408, "opportunity"],
+          [125, 153, 267.744, "opportunity"],
+          [153, 179, 268.96, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 12,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 28], [28, 60], [60, 91], [91, 125], [125, 153], [153, 179]],
+        "findings": []
+      }
+    },
+    {
+      "text": "க்ஷத்திரியர், ஸ்ரீ, கொ, கொ, ஃ, ஞானம், வணக்கம்.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 9, 74.64, "emergency"],
+          [9, 20, 62.032, "opportunity"],
+          [20, 24, 41.856, "opportunity"],
+          [24, 32, 64.352, "opportunity"],
+          [32, 39, 66.576, "opportunity"],
+          [39, 44, 68.752, "emergency"],
+          [44, 47, 18.016, "mandatory"]
+        ],
+        "160": [
+          [0, 20, 136.672, "opportunity"],
+          [20, 32, 110.368, "opportunity"],
+          [32, 47, 157.504, "mandatory"]
+        ],
+        "320": [[0, 32, 251.2, "opportunity"], [32, 47, 157.504, "mandatory"]]
+      },
+      "fit": {
+        "size": 24.25,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 20], [20, 32], [32, 47]],
+        "findings": []
+      }
+    },
+    {
+      "text": "தனி புள்ளி: ் இங்கே; தனி உயிர்க்குறி: ா.",
+      "findings": [
+        {
+          "code": "broken-cluster",
+          "start": 11,
+          "end": 13,
+          "font": 0
+        },
+        {
+          "code": "broken-cluster",
+          "start": 37,
+          "end": 39,
+          "font": 0
+        }
+      ],
+      "lines": {
+        "80": [
+          [0, 4, 37.136, "opportunity"],
+          [4, 14, 67.824, "opportunity"],
+          [14, 21, 63.728, "opportunity"],
+          [21, 25, 37.136, "opportunity"],
+          [25, 34, 76.384, "emergency"],
+          [34, 40, 41.072, "mandatory"]
+        ],
+        "160": [
+          [0, 14, 109.12, "opportunity"],
+          [14, 25, 105.024, "opportunity"],
+          [25, 40, 117.456, "mandatory"]
+        ],
+        "320": [[0, 25, 218.304, "opportunity"], [25, 40, 117.456, "mandatory"]]
+      },
+      "fit": {
+        "size": 26.5,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 14], [14, 25], [25, 40]],
+        "findings": [["broken-cluster", 11, 13], ["broken-cluster", 37, 39]]
+      }
+    }
+  ]
+}

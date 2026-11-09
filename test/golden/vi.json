@@ -1,0 +1,164 @@
+{
+  "lang": "vi",
+  "fonts": ["NotoSans-Regular.ttf"],
+  "settings": {
+    "size": 16,
+    "widths": [80, 160, 320],
+    "box": {
+      "width": 240,
+      "height": 96
+    },
+    "minSize": 8,
+    "maxSize": 48
+  },
+  "cases": [
+    {
+      "text": "Trăm năm trong cõi người ta, Chữ tài chữ mệnh khéo là ghét nhau. Trải qua một cuộc bể dâu, Những điều trông thấy mà đau đớn lòng.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 9, 76.304, "opportunity"],
+          [9, 19, 67.12, "opportunity"],
+          [19, 29, 67.696, "opportunity"],
+          [29, 37, 53.824, "opportunity"],
+          [37, 46, 76.272, "opportunity"],
+          [46, 54, 54.4, "opportunity"],
+          [54, 59, 34.528, "opportunity"],
+          [59, 70, 74.576, "opportunity"],
+          [70, 78, 63.28, "opportunity"],
+          [78, 86, 57.952, "opportunity"],
+          [86, 91, 32.992, "opportunity"],
+          [91, 97, 52.56, "opportunity"],
+          [97, 108, 78.544, "opportunity"],
+          [108, 116, 60.896, "opportunity"],
+          [116, 124, 62.512, "opportunity"],
+          [124, 129, 37.824, "mandatory"]
+        ],
+        "160": [
+          [0, 19, 147.584, "opportunity"],
+          [19, 41, 158.192, "opportunity"],
+          [41, 59, 141.008, "opportunity"],
+          [59, 78, 142.016, "opportunity"],
+          [78, 97, 151.824, "opportunity"],
+          [97, 116, 143.6, "opportunity"],
+          [116, 129, 104.496, "mandatory"]
+        ],
+        "320": [
+          [0, 41, 309.936, "opportunity"],
+          [41, 78, 287.184, "opportunity"],
+          [78, 116, 299.584, "opportunity"],
+          [116, 129, 104.496, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 16,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0.448,
+        "lines": [[0, 29], [29, 59], [59, 86], [86, 116], [116, 129]],
+        "findings": [["overflow-y", 116, 129]]
+      }
+    },
+    {
+      "text": "Rằng năm Gia Tĩnh triều Minh, Bốn phương phẳng lặng, hai kinh vững vàng. Có nhà viên ngoại họ Vương, Gia tư nghĩ cũng thường thường bực trung.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 9, 76.64, "opportunity"],
+          [9, 18, 61.712, "opportunity"],
+          [18, 24, 35.424, "opportunity"],
+          [24, 34, 76.832, "opportunity"],
+          [34, 41, 60.096, "opportunity"],
+          [41, 47, 48.432, "opportunity"],
+          [47, 57, 64.272, "opportunity"],
+          [57, 67, 75.248, "opportunity"],
+          [67, 76, 65.072, "opportunity"],
+          [76, 85, 64.08, "opportunity"],
+          [85, 94, 66.24, "opportunity"],
+          [94, 101, 54.096, "opportunity"],
+          [101, 108, 45.472, "opportunity"],
+          [108, 118, 75.2, "opportunity"],
+          [118, 125, 56.032, "opportunity"],
+          [125, 132, 56.032, "opportunity"],
+          [132, 142, 78.752, "mandatory"]
+        ],
+        "160": [
+          [0, 18, 142.512, "opportunity"],
+          [18, 34, 116.416, "opportunity"],
+          [34, 53, 153.968, "opportunity"],
+          [53, 73, 147.68, "opportunity"],
+          [73, 94, 158.432, "opportunity"],
+          [94, 113, 141.632, "opportunity"],
+          [113, 132, 157.68, "opportunity"],
+          [132, 142, 78.752, "mandatory"]
+        ],
+        "320": [
+          [0, 34, 263.088, "opportunity"],
+          [34, 73, 305.808, "opportunity"],
+          [73, 113, 304.224, "opportunity"],
+          [113, 142, 240.592, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 15.75,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 30], [30, 57], [57, 85], [85, 113], [113, 142]],
+        "findings": []
+      }
+    },
+    {
+      "text": "Thuyền ở bến Ngọc Hà; chữ chồng dấu: Ằ Ẳ Ẵ Ặ Ể Ễ Ệ Ở Ỡ Ợ Ừ Ử Ữ Ự.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 9, 69.76, "opportunity"],
+          [9, 18, 72.272, "opportunity"],
+          [18, 26, 57.632, "opportunity"],
+          [26, 32, 46.976, "opportunity"],
+          [32, 43, 76.144, "opportunity"],
+          [43, 53, 66.096, "opportunity"],
+          [53, 63, 79.168, "opportunity"],
+          [63, 65, 16.768, "mandatory"]
+        ],
+        "160": [
+          [0, 18, 146.192, "opportunity"],
+          [18, 37, 145.92, "opportunity"],
+          [37, 59, 159.296, "opportunity"],
+          [59, 65, 50.048, "mandatory"]
+        ],
+        "320": [[0, 39, 310.656, "opportunity"], [39, 65, 199.12, "mandatory"]]
+      },
+      "fit": {
+        "size": 21.75,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 22], [22, 45], [45, 65]],
+        "findings": []
+      }
+    },
+    {
+      "text": "Viết tách dấu: Ể Ở Ằ Ữ ệ.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 10, 65.008, "opportunity"],
+          [10, 27, 77.136, "opportunity"],
+          [27, 35, 29.952, "mandatory"]
+        ],
+        "160": [[0, 27, 146.304, "opportunity"], [27, 35, 29.952, "mandatory"]],
+        "320": [[0, 35, 180.416, "mandatory"]]
+      },
+      "fit": {
+        "size": 37.5,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 15], [15, 35]],
+        "findings": []
+      }
+    }
+  ]
+}

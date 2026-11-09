@@ -6,9 +6,7 @@ Where the build of matra stands, and what comes next. The spec is the build brie
 
 ## Next
 
-**M1 item 11: golden files for the M1 languages** (en, nl, de, fr, pl, tr, vi, el, ru, sr, uk, hi, mr, bn, ta). From the brief, section 7: one JSON file for each Tier 1 language in `test/golden/<lang>.json`: strings, font, lang, expected findings, lines at fixed widths, and fit results. Change a golden file only with `pnpm golden:update` and a reason in the commit message. Test text only from: short Project Gutenberg extracts (without the Gutenberg name and header), Wikisource transcriptions of authors who died more than 70 years ago (for example Premchand for hi, Tagore for bn, Subramania Bharati for ta), and hand-written edge cases (stacked Vietnamese accents, Turkish i, Dutch IJ, emoji joiner sequences, a vowel sign with no base letter, invented names with marks). Record each in `fixtures/SOURCES.md`. Golden files for scripts that only a native reader can check (bn, ta; hi, mr) need the owner's approval.
-
-Then 12 README. At the end of M1: stop, report, wait for the owner. The M1 report gives the benchmark change: `pnpm bench` (the M0 baseline has only the HarfBuzz reference; compare the `× shape` column, because the machine changed).
+**M1 item 12: README with examples in six scripts.** Replace the "under construction" README with install, loading fonts, examples in Devanagari, Tamil, Bengali, Latin (Vietnamese), Cyrillic and Greek with real outputs, the API, the CLI, and the tiers. At the end of M1: stop, report, wait for the owner. The M1 report gives the benchmark change: `pnpm bench` (the M0 baseline has only the HarfBuzz reference; compare the `× shape` column, because the machine changed).
 
 ## How work is done
 
@@ -48,15 +46,15 @@ Git: work on a branch, push the branch, and open a pull request. Never push to `
 | --- | ----------------------------------------------------- | ------ | -------------------------------- |
 | 2   | Font loading                                          | Done   | `88c74a6`                        |
 | 3   | Font runs and `shape`                                 | Done   | `0c70de7`                        |
-| 4   | `missing-glyph`, `broken-cluster` and `font-fallback` | Done   | `395b6c2`                        |
+| 4   | `missing-glyph`, `broken-cluster` and `font-fallback` | Done   | `395b6c2`, `a9ee9a2` (fix)       |
 | 5   | `segment`, with syllables for hi, mr, bn and ta       | Done   | `75449ba`, `02d8b23` (bad-break) |
 | 6   | Unicode conformance in CI                             | Done   | `1a53d35`                        |
 | 7   | `measure`                                             | Done   | `f162e7c`                        |
 | 8   | `wrap`                                                | Done   | `389d38e`                        |
 | 9   | `fit`                                                 | Done   | `e03d827`                        |
-| 10  | CLI                                                   | Done   | (added with item 11)             |
-| 11  | Golden files for the M1 languages                     | Next   |                                  |
-| 12  | README with examples in six scripts                   |        |                                  |
+| 10  | CLI                                                   | Done   | `eb0e058`                        |
+| 11  | Golden files for the M1 languages                     | Done   | (added with item 12)             |
+| 12  | README with examples in six scripts                   | Next   |                                  |
 
 M1 languages (Tier 1): Latin (en, nl, de, fr, pl, tr, vi), Greek (el), Cyrillic (ru, sr, uk), Devanagari (hi, mr), Bengali (bn), Tamil (ta).
 
@@ -79,11 +77,12 @@ Choices the brief does not spell out. Each is also in its commit message.
 - **`measure`** (item 7): ascent and descent are positive; ink is positive above and below the baseline. Controls get no width.
 - **`wrap`** (item 8): spaces and controls at the end of a line hang (not in its width; no-break spaces do not hang). A word wider than the line breaks between syllables first, then between graphemes. A line is shaped again when it starts or ends where HarfBuzz marks a break unsafe, inside a cluster (a ligature), at the edge between two shaping items, or at a mark (alone, it gets a dotted circle). A fast-check property checks that each line has the width it has when shaped on its own. Layout runs at size 1 (em) and scales, so one shaping serves every size in `fit`.
 - **`fit`** (item 9): a size fits only when no word must break inside (no `emergency` line). The search tries `maxSize` first, then a binary search over `minSize` + k × 0.25. Ink is not part of the search: lines stack from the top of the box with the CSS half-leading model, and ink above the top or below the bottom gives an `overflow-y` finding and counts in `overflowY`, even when `fits` is true (Vietnamese Ở in Noto Sans at lineHeight 1.2 pokes 0.011 em above). `overflowY` is the height the lines need beyond the box, or the height of the lines beyond `maxLines`. `findings` include the `check` findings.
+- **Golden files** (item 11): two extracts and one to three hand-written edge cases for each language, in `fixtures/text/golden-<lang>.txt`. Each case holds the findings (without messages, so a reworded message does not change a golden file), the lines at 80, 160 and 320 px at 16 px, and a fit into 240 × 96 px from 8 to 48 px. Numbers have three decimals. Most fits that fill the height give an ink `overflow-y`: descenders of the last line, or tall Devanagari signs on the first, go past the box at lineHeight 1.2. The smoke test runs the first two cases of each language on Node, Bun and Deno. Building the Tamil file found a HarfBuzz quirk, fixed in `a9ee9a2`: in a line with two broken clusters, HarfBuzz may put a dotted circle on the first only.
 - **Test strings** write invisible characters (ZWJ, ZWNJ, NBSP, marks with no base) as `\u` escapes.
 
 ## Open questions for the owner
 
-- Golden files for bn and ta (and hi, mr) need the approval of a native reader (rule above). They come in item 11.
+- Golden files for bn and ta (and hi, mr) need the approval of a native reader (rule above): `test/golden/{hi,mr,bn,ta}.json`, from `fixtures/text/golden-{hi,mr,bn,ta}.txt`. Check the findings and the line breaks.
 - linebreak 2.0.0 implements UAX #14 for Unicode 13 (1,023 LineBreakTest differences, mostly in Tier 2 scripts). Keep it, or plan a replacement?
 
 ## Owner steps (brief, section 1)

@@ -1,0 +1,172 @@
+{
+  "lang": "nl",
+  "fonts": ["NotoSans-Regular.ttf"],
+  "settings": {
+    "size": 16,
+    "widths": [80, 160, 320],
+    "box": {
+      "width": 240,
+      "height": 96
+    },
+    "minSize": 8,
+    "maxSize": 48
+  },
+  "cases": [
+    {
+      "text": "Allen schaterden om die verrassing, dien blik achter de coulisses; alleen Frédérique bleef ernstig, in het bewustzijn, dat zij de waardigheid eener antieke vorstin had op te houden.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 6, 37.392, "opportunity"],
+          [6, 15, 74.16, "emergency"],
+          [15, 24, 65.84, "opportunity"],
+          [24, 34, 78.208, "emergency"],
+          [34, 46, 72.128, "opportunity"],
+          [46, 56, 70.976, "opportunity"],
+          [56, 67, 71.808, "opportunity"],
+          [67, 74, 45.168, "opportunity"],
+          [74, 83, 72.944, "emergency"],
+          [83, 91, 50.704, "opportunity"],
+          [91, 103, 75.392, "opportunity"],
+          [103, 107, 24.688, "opportunity"],
+          [107, 116, 70.224, "emergency"],
+          [116, 127, 62.864, "opportunity"],
+          [127, 130, 18.864, "opportunity"],
+          [130, 139, 79.536, "emergency"],
+          [139, 148, 61.696, "opportunity"],
+          [148, 156, 55.36, "opportunity"],
+          [156, 164, 51.872, "opportunity"],
+          [164, 174, 71.344, "opportunity"],
+          [174, 181, 62.496, "mandatory"]
+        ],
+        "160": [
+          [0, 20, 154.4, "opportunity"],
+          [20, 41, 146.688, "opportunity"],
+          [41, 56, 101.776, "opportunity"],
+          [56, 74, 121.136, "opportunity"],
+          [74, 91, 123.648, "opportunity"],
+          [91, 107, 104.24, "opportunity"],
+          [107, 130, 156.112, "opportunity"],
+          [130, 148, 141.232, "opportunity"],
+          [148, 168, 144.256, "opportunity"],
+          [168, 181, 105.136, "mandatory"]
+        ],
+        "320": [
+          [0, 41, 305.248, "opportunity"],
+          [41, 85, 313.2, "opportunity"],
+          [85, 130, 306.192, "opportunity"],
+          [130, 171, 313.328, "opportunity"],
+          [171, 181, 81.456, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 13.25,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 36], [36, 74], [74, 107], [107, 142], [142, 174], [174, 181]],
+        "findings": []
+      }
+    },
+    {
+      "text": "Paul en Marie, op hooge trappen, bijgelicht door twee der meiden, rukten Kleopatra's boudoir uiteen. Dien beijverde zich neêrgeworpen draperieën en afgegleden kettingen op te rapen.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 8, 55.744, "opportunity"],
+          [8, 18, 71.216, "opportunity"],
+          [18, 24, 48.112, "opportunity"],
+          [24, 33, 63.92, "opportunity"],
+          [33, 44, 68.56, "opportunity"],
+          [44, 54, 76.368, "opportunity"],
+          [54, 58, 25.472, "opportunity"],
+          [58, 66, 61.152, "opportunity"],
+          [66, 73, 49.728, "opportunity"],
+          [73, 83, 76.032, "emergency"],
+          [83, 93, 71.488, "opportunity"],
+          [93, 101, 52.016, "opportunity"],
+          [101, 106, 34.72, "opportunity"],
+          [106, 116, 69.424, "opportunity"],
+          [116, 121, 29.216, "opportunity"],
+          [121, 129, 75.184, "emergency"],
+          [129, 134, 35.36, "opportunity"],
+          [134, 143, 72.752, "emergency"],
+          [143, 148, 32.96, "opportunity"],
+          [148, 157, 75.2, "emergency"],
+          [157, 159, 9.888, "opportunity"],
+          [159, 169, 71.888, "opportunity"],
+          [169, 175, 38.48, "opportunity"],
+          [175, 181, 48.304, "mandatory"]
+        ],
+        "160": [
+          [0, 18, 131.12, "opportunity"],
+          [18, 33, 116.192, "opportunity"],
+          [33, 54, 149.088, "opportunity"],
+          [54, 73, 144.672, "opportunity"],
+          [73, 93, 147.04, "opportunity"],
+          [93, 106, 90.896, "opportunity"],
+          [106, 121, 102.8, "opportunity"],
+          [121, 134, 110.544, "opportunity"],
+          [134, 148, 105.712, "opportunity"],
+          [148, 159, 85.088, "opportunity"],
+          [159, 175, 114.528, "opportunity"],
+          [175, 181, 48.304, "mandatory"]
+        ],
+        "320": [
+          [0, 33, 251.472, "opportunity"],
+          [33, 73, 297.92, "opportunity"],
+          [73, 116, 315.68, "opportunity"],
+          [116, 148, 253.792, "opportunity"],
+          [148, 181, 256.24, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 13.25,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 33], [33, 66], [66, 101], [101, 134], [134, 169], [169, 181]],
+        "findings": []
+      }
+    },
+    {
+      "text": "Bij het IJsselmeer en in IJmuiden ligt de IJzeren Rijn; Ĳsland schrijft men soms met ĳ.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 8, 47.504, "opportunity"],
+          [8, 19, 77.888, "opportunity"],
+          [19, 25, 37.088, "opportunity"],
+          [25, 34, 67.52, "opportunity"],
+          [34, 42, 46.896, "opportunity"],
+          [42, 50, 51.536, "opportunity"],
+          [50, 56, 32.384, "opportunity"],
+          [56, 63, 50.288, "opportunity"],
+          [63, 72, 51.376, "opportunity"],
+          [72, 81, 78, "opportunity"],
+          [81, 87, 46.464, "mandatory"]
+        ],
+        "160": [
+          [0, 22, 152.624, "opportunity"],
+          [22, 42, 136.752, "opportunity"],
+          [42, 63, 142.528, "opportunity"],
+          [63, 81, 133.536, "opportunity"],
+          [81, 87, 46.464, "mandatory"]
+        ],
+        "320": [
+          [0, 42, 293.536, "opportunity"],
+          [42, 85, 314.144, "opportunity"],
+          [85, 87, 12.544, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 20,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0.56,
+        "lines": [[0, 25], [25, 50], [50, 76], [76, 87]],
+        "findings": [["overflow-y", 76, 87]]
+      }
+    }
+  ]
+}

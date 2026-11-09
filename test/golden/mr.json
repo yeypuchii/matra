@@ -1,0 +1,196 @@
+{
+  "lang": "mr",
+  "fonts": ["NotoSansDevanagari-Regular.ttf", "NotoSans-Regular.ttf"],
+  "settings": {
+    "size": 16,
+    "widths": [80, 160, 320],
+    "box": {
+      "width": 240,
+      "height": 96
+    },
+    "minSize": 8,
+    "maxSize": 48
+  },
+  "cases": [
+    {
+      "text": "भास्कराचार्य कालाची अत्यंत सूक्ष्मपणे विवेचना व्हावी म्हणून मोठमोठ्या नामांकित पंडितांस व दैवज्ञांस तेथे बसवून आपण स्वतः एकसारखे त्या घटकापात्राकडे नजर देऊन राहिले होते. परंतु दैवाची गति किती विचित्र!",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 13, 68.176, "opportunity"],
+          [13, 20, 46.064, "opportunity"],
+          [20, 27, 35.264, "opportunity"],
+          [27, 38, 48.16, "opportunity"],
+          [38, 53, 79.584, "opportunity"],
+          [53, 60, 33.776, "opportunity"],
+          [60, 70, 58.928, "opportunity"],
+          [70, 79, 52.288, "opportunity"],
+          [79, 90, 58.928, "opportunity"],
+          [90, 105, 66.112, "opportunity"],
+          [105, 115, 78.896, "opportunity"],
+          [115, 121, 27.472, "opportunity"],
+          [121, 134, 77.952, "opportunity"],
+          [134, 145, 72.448, "emergency"],
+          [145, 157, 74.112, "opportunity"],
+          [157, 170, 64.72, "opportunity"],
+          [170, 183, 64.752, "opportunity"],
+          [183, 192, 56.128, "opportunity"],
+          [192, 200, 42.304, "mandatory"]
+        ],
+        "160": [
+          [0, 27, 157.824, "opportunity"],
+          [27, 53, 131.904, "opportunity"],
+          [53, 79, 153.312, "opportunity"],
+          [79, 105, 129.2, "opportunity"],
+          [105, 121, 110.528, "opportunity"],
+          [121, 134, 77.952, "opportunity"],
+          [134, 157, 146.56, "opportunity"],
+          [157, 183, 133.632, "opportunity"],
+          [183, 200, 102.592, "mandatory"]
+        ],
+        "320": [
+          [0, 53, 293.888, "opportunity"],
+          [53, 105, 286.672, "opportunity"],
+          [105, 152, 309.264, "opportunity"],
+          [152, 200, 274.48, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 15.5,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0.806,
+        "lines": [[0, 38], [38, 79], [79, 121], [121, 157], [157, 200]],
+        "findings": [["overflow-y", 0, 37]]
+      }
+    },
+    {
+      "text": "पतिपुत्रविहीन स्थितीत बालविधवांस दुसऱ्याच्या येथें पोळपाट लाटणे घेऊन जाऊन पोळ्या भाजण्यापेक्षां विद्यार्जन करून परमेश्वरभक्तींत व विद्यादानांत बालविधवांचा कालक्षेप होणें अत्यंत श्रेयस्कर, अशा मताचे भास्कराचार्य असल्यामुळे त्यांनी आपल्या प्रिय कन्येस विद्यासंपन्न करण्याचे योजिलें.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 14, 74.832, "opportunity"],
+          [14, 22, 42.656, "opportunity"],
+          [22, 33, 71.2, "opportunity"],
+          [33, 45, 57.44, "opportunity"],
+          [45, 58, 70.352, "opportunity"],
+          [58, 69, 70.016, "opportunity"],
+          [69, 81, 77.712, "opportunity"],
+          [81, 96, 72.992, "opportunity"],
+          [96, 107, 48.016, "opportunity"],
+          [107, 112, 33.6, "opportunity"],
+          [112, 126, 75.84, "emergency"],
+          [126, 130, 22.176, "opportunity"],
+          [130, 143, 62.048, "opportunity"],
+          [143, 155, 74.688, "opportunity"],
+          [155, 170, 76.544, "opportunity"],
+          [170, 177, 35.264, "opportunity"],
+          [177, 188, 49.952, "opportunity"],
+          [188, 198, 64.272, "opportunity"],
+          [198, 211, 68.176, "opportunity"],
+          [211, 222, 65.504, "opportunity"],
+          [222, 230, 31.088, "opportunity"],
+          [230, 243, 72.864, "opportunity"],
+          [243, 250, 37.104, "opportunity"],
+          [250, 263, 56.288, "opportunity"],
+          [263, 272, 50.016, "opportunity"],
+          [272, 280, 44.912, "mandatory"]
+        ],
+        "160": [
+          [0, 22, 121.648, "opportunity"],
+          [22, 51, 156.464, "opportunity"],
+          [51, 69, 120.864, "opportunity"],
+          [69, 96, 154.864, "opportunity"],
+          [96, 112, 85.776, "opportunity"],
+          [112, 130, 98.016, "opportunity"],
+          [130, 155, 140.896, "opportunity"],
+          [155, 177, 115.968, "opportunity"],
+          [177, 198, 118.384, "opportunity"],
+          [198, 222, 137.84, "opportunity"],
+          [222, 250, 149.376, "opportunity"],
+          [250, 280, 159.536, "mandatory"]
+        ],
+        "320": [
+          [0, 51, 282.272, "opportunity"],
+          [51, 96, 279.888, "opportunity"],
+          [96, 143, 254.16, "opportunity"],
+          [143, 198, 317.36, "opportunity"],
+          [198, 250, 291.376, "opportunity"],
+          [250, 280, 159.536, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 13.25,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0.689,
+        "lines": [[0, 51], [51, 96], [96, 143], [143, 192], [192, 243], [243, 280]],
+        "findings": [["overflow-y", 0, 50]]
+      }
+    },
+    {
+      "text": "दऱ्या, ऱ्हस्व, कळस, सावळा, नेत्रावर्ती, र्‍य आणि ज्ञानेश्वरी।",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 15, 68.48, "opportunity"],
+          [15, 20, 39.552, "opportunity"],
+          [20, 27, 44.448, "opportunity"],
+          [27, 45, 66.688, "opportunity"],
+          [45, 49, 32.064, "opportunity"],
+          [49, 61, 51.04, "mandatory"]
+        ],
+        "160": [
+          [0, 20, 112.192, "opportunity"],
+          [20, 49, 151.52, "opportunity"],
+          [49, 61, 51.04, "mandatory"]
+        ],
+        "320": [[0, 49, 267.872, "opportunity"], [49, 61, 51.04, "mandatory"]]
+      },
+      "fit": {
+        "size": 26.5,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 20], [20, 45], [45, 61]],
+        "findings": []
+      }
+    },
+    {
+      "text": "एकटी मात्रा: ी आणि ा; जोडाक्षरे: क्ष, त्र, द्य, ष्ट्र।",
+      "findings": [
+        {
+          "code": "broken-cluster",
+          "start": 12,
+          "end": 14,
+          "font": 0
+        },
+        {
+          "code": "broken-cluster",
+          "start": 18,
+          "end": 20,
+          "font": 0
+        }
+      ],
+      "lines": {
+        "80": [
+          [0, 5, 33.344, "opportunity"],
+          [5, 15, 47.856, "opportunity"],
+          [15, 22, 53.232, "opportunity"],
+          [22, 38, 71.36, "opportunity"],
+          [38, 54, 51.216, "mandatory"]
+        ],
+        "160": [[0, 22, 142.752, "opportunity"], [22, 54, 126.736, "mandatory"]],
+        "320": [[0, 54, 273.648, "mandatory"]]
+      },
+      "fit": {
+        "size": 26.75,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 1.391,
+        "lines": [[0, 22], [22, 54]],
+        "findings": [["overflow-y", 0, 21], ["broken-cluster", 12, 14], ["broken-cluster", 18, 20]]
+      }
+    }
+  ]
+}

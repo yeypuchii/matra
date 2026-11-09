@@ -1,0 +1,168 @@
+{
+  "lang": "el",
+  "fonts": ["NotoSans-Regular.ttf"],
+  "settings": {
+    "size": 16,
+    "widths": [80, 160, 320],
+    "box": {
+      "width": 240,
+      "height": 96
+    },
+    "minSize": 8,
+    "maxSize": 48
+  },
+  "cases": [
+    {
+      "text": "Ὁ μικρὸς λύχνος, κρεμαστός, ἐτρεμόσβηνε κάτω τοῦ φατνώματος τῆς ἑστίας. Ἔρριπτε σκιὰν ἀντὶ φωτὸς εἰς τὰ ὀλίγα πενιχρὰ ἔπιπλα, τὰ ὁποῖα ἐφαίνοντο καθαριώτερα καὶ κοσμιώτερα τὴν νύκτα.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 9, 69.36, "opportunity"],
+          [9, 17, 56.912, "opportunity"],
+          [17, 25, 72.352, "emergency"],
+          [25, 28, 12.08, "opportunity"],
+          [28, 36, 71.648, "emergency"],
+          [36, 45, 68.24, "opportunity"],
+          [45, 49, 26.768, "opportunity"],
+          [49, 57, 77.632, "emergency"],
+          [57, 64, 46.992, "opportunity"],
+          [64, 72, 51.904, "opportunity"],
+          [72, 80, 63.776, "opportunity"],
+          [80, 91, 77.28, "opportunity"],
+          [91, 101, 73.68, "opportunity"],
+          [101, 110, 62.688, "opportunity"],
+          [110, 118, 60.288, "opportunity"],
+          [118, 129, 77.456, "opportunity"],
+          [129, 135, 44.448, "opportunity"],
+          [135, 145, 76.832, "opportunity"],
+          [145, 153, 72.88, "emergency"],
+          [153, 161, 55.072, "opportunity"],
+          [161, 169, 70.72, "emergency"],
+          [169, 176, 49.472, "opportunity"],
+          [176, 182, 47.824, "mandatory"]
+        ],
+        "160": [
+          [0, 17, 130.432, "opportunity"],
+          [17, 28, 84.432, "opportunity"],
+          [28, 45, 139.888, "opportunity"],
+          [45, 64, 155.232, "opportunity"],
+          [64, 80, 119.84, "opportunity"],
+          [80, 101, 155.12, "opportunity"],
+          [101, 118, 127.136, "opportunity"],
+          [118, 135, 126.064, "opportunity"],
+          [135, 145, 76.832, "opportunity"],
+          [145, 161, 127.632, "opportunity"],
+          [161, 176, 120.192, "opportunity"],
+          [176, 182, 47.824, "mandatory"]
+        ],
+        "320": [
+          [0, 28, 219.024, "opportunity"],
+          [28, 64, 299.28, "opportunity"],
+          [64, 104, 301.088, "opportunity"],
+          [104, 145, 316.384, "opportunity"],
+          [145, 182, 303.968, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 13.25,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 28], [28, 60], [60, 97], [97, 135], [135, 161], [161, 182]],
+        "findings": []
+      }
+    },
+    {
+      "text": "Εἰς τοὺς λογισμούς της, συγκεφαλαιοῦσα ὅλην τὴν ζωήν της, ἔβλεπεν ὅτι ποτὲ δὲν εἶχε κάμει ἄλλο τίποτε εἰμὴ νὰ ὑπηρετῇ τοὺς ἄλλους. Ὅταν ἦτο παιδίσκη, ὑπηρέτει τοὺς γονεῖς της.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 9, 60.4, "opportunity"],
+          [9, 19, 77.472, "opportunity"],
+          [19, 24, 29.648, "opportunity"],
+          [24, 32, 73.104, "emergency"],
+          [32, 39, 53.68, "opportunity"],
+          [39, 48, 65.472, "opportunity"],
+          [48, 58, 71.456, "opportunity"],
+          [58, 66, 59.056, "opportunity"],
+          [66, 75, 61.68, "opportunity"],
+          [75, 84, 58.56, "opportunity"],
+          [84, 90, 41.04, "opportunity"],
+          [90, 95, 36.096, "opportunity"],
+          [95, 102, 47.68, "opportunity"],
+          [102, 110, 54.96, "opportunity"],
+          [110, 118, 64.272, "opportunity"],
+          [118, 123, 34.56, "opportunity"],
+          [123, 131, 57.744, "opportunity"],
+          [131, 140, 73.648, "opportunity"],
+          [140, 150, 72.032, "opportunity"],
+          [150, 159, 67.056, "opportunity"],
+          [159, 164, 34.56, "opportunity"],
+          [164, 175, 79.824, "mandatory"]
+        ],
+        "160": [
+          [0, 19, 142.032, "opportunity"],
+          [19, 24, 29.648, "opportunity"],
+          [24, 39, 126.624, "opportunity"],
+          [39, 58, 141.088, "opportunity"],
+          [58, 79, 154.24, "opportunity"],
+          [79, 95, 114.672, "opportunity"],
+          [95, 110, 106.8, "opportunity"],
+          [110, 123, 102.992, "opportunity"],
+          [123, 140, 135.552, "opportunity"],
+          [140, 159, 143.248, "opportunity"],
+          [159, 175, 118.544, "mandatory"]
+        ],
+        "320": [
+          [0, 39, 306.624, "opportunity"],
+          [39, 79, 299.488, "opportunity"],
+          [79, 118, 294.064, "opportunity"],
+          [118, 150, 250.464, "opportunity"],
+          [150, 175, 189.76, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 13.25,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 24], [24, 58], [58, 95], [95, 131], [131, 164], [164, 175]],
+        "findings": []
+      }
+    },
+    {
+      "text": "Πολυτονικό: ἀρχή, ὁδός, ᾠδή, ῥήτωρ, Ἀθῆναι· μονοτονικό: ΆΈΉΊΌΎΏ, ΐ, ΰ, ϊ, ϋ.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 9, 77.76, "emergency"],
+          [9, 18, 60.896, "opportunity"],
+          [18, 24, 40.848, "opportunity"],
+          [24, 29, 36.208, "opportunity"],
+          [29, 36, 53.52, "opportunity"],
+          [36, 44, 57.92, "opportunity"],
+          [44, 53, 75.824, "emergency"],
+          [53, 56, 13.968, "opportunity"],
+          [56, 62, 72.336, "emergency"],
+          [62, 74, 62.64, "opportunity"],
+          [74, 76, 13.856, "mandatory"]
+        ],
+        "160": [
+          [0, 18, 138.656, "opportunity"],
+          [18, 36, 138.896, "opportunity"],
+          [36, 56, 151.872, "opportunity"],
+          [56, 76, 152.992, "mandatory"]
+        ],
+        "320": [[0, 36, 281.712, "opportunity"], [36, 76, 309.024, "mandatory"]]
+      },
+      "fit": {
+        "size": 20,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 24], [24, 44], [44, 65], [65, 76]],
+        "findings": []
+      }
+    }
+  ]
+}
