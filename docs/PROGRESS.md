@@ -6,7 +6,14 @@ Where the build of matra stands, and what comes next. The spec is the build brie
 
 ## Next
 
-**M1 item 12: README with examples in six scripts.** Replace the "under construction" README with install, loading fonts, examples in Devanagari, Tamil, Bengali, Latin (Vietnamese), Cyrillic and Greek with real outputs, the API, the CLI, and the tiers. At the end of M1: stop, report, wait for the owner. The M1 report gives the benchmark change: `pnpm bench` (the M0 baseline has only the HarfBuzz reference; compare the `× shape` column, because the machine changed).
+**M1 is done. Waiting for the owner** (brief, section 3: stop at the end of each milestone):
+
+1. Review PR #2, and approve or correct the golden files for hi, mr, bn and ta (see Open questions).
+2. Merge PR #2, then publish 0.1.0 (`pnpm changeset version`, review, `pnpm release`).
+
+Then **M2 item 1: `matra/captions`** (SRT, WebVTT, ASS), with a design note in `docs/decisions/` before the code (required from M2 on).
+
+M1 benchmark (`pnpm bench`, 2026-11-09, node v24.22.1, AMD EPYC 7B12; 1,030-character Hindi paragraph, 16 px, width 400 px): HarfBuzz shaping 934 µs (the reference), `check` 2,933 µs (3.1 × shaping), `wrap` 1,906 µs (2.0 ×), `fit` 3,818 µs (4.1 ×). The M0 baseline has only the reference, on another CPU (Intel Xeon, 1,601 µs), so the × shape column is the one to compare. The baseline file is not changed.
 
 ## How work is done
 
@@ -31,14 +38,14 @@ Git: work on a branch, push the branch, and open a pull request. Never push to `
 
 ## Milestones
 
-| Milestone                 | Status                     | Done when                                                         |
-| ------------------------- | -------------------------- | ----------------------------------------------------------------- |
-| M0 Setup                  | Done (PR #1)               | CI passes. The owner publishes 0.0.0.                             |
-| M1 Core (0.1.0)           | In progress (PR #2, draft) | All tests pass. The owner publishes 0.1.0.                        |
-| M2 Adapters (0.2.0)       | Not started                | The round-trip tests and the image tests pass. Owner publishes.   |
-| M3 Tier 1 breadth (0.3.0) | Not started                | Golden tests for ar, he, th, zh-Hans, zh-Hant and ja pass.        |
-| M4 Print (`matra-print`)  | Not started                | A sample book gives a PDF that a print vendor's file check takes. |
-| 1.0                       | Not started                | The owner publishes 1.0.0.                                        |
+| Milestone                 | Status                              | Done when                                                         |
+| ------------------------- | ----------------------------------- | ----------------------------------------------------------------- |
+| M0 Setup                  | Done (PR #1)                        | CI passes. The owner publishes 0.0.0.                             |
+| M1 Core (0.1.0)           | Done, waiting for the owner (PR #2) | All tests pass. The owner publishes 0.1.0.                        |
+| M2 Adapters (0.2.0)       | Not started                         | The round-trip tests and the image tests pass. Owner publishes.   |
+| M3 Tier 1 breadth (0.3.0) | Not started                         | Golden tests for ar, he, th, zh-Hans, zh-Hant and ja pass.        |
+| M4 Print (`matra-print`)  | Not started                         | A sample book gives a PDF that a print vendor's file check takes. |
+| 1.0                       | Not started                         | The owner publishes 1.0.0.                                        |
 
 ### M1 Core
 
@@ -53,8 +60,8 @@ Git: work on a branch, push the branch, and open a pull request. Never push to `
 | 8   | `wrap`                                                | Done   | `389d38e`                        |
 | 9   | `fit`                                                 | Done   | `e03d827`                        |
 | 10  | CLI                                                   | Done   | `eb0e058`                        |
-| 11  | Golden files for the M1 languages                     | Done   | (added with item 12)             |
-| 12  | README with examples in six scripts                   | Next   |                                  |
+| 11  | Golden files for the M1 languages                     | Done   | `580a36a`                        |
+| 12  | README with examples in six scripts                   | Done   | the last M1 commit               |
 
 M1 languages (Tier 1): Latin (en, nl, de, fr, pl, tr, vi), Greek (el), Cyrillic (ru, sr, uk), Devanagari (hi, mr), Bengali (bn), Tamil (ta).
 
