@@ -1,6 +1,6 @@
 {
-  "name": "matra",
-  "version": "0.0.0",
+  "name": "@yeypuchi/matra",
+  "version": "0.1.0",
   "description": "Check that text will show and fit correctly in a font, box and language, for any script that HarfBuzz shapes. No headless browser.",
   "keywords": [
     "harfbuzz",
@@ -34,11 +34,14 @@
     "./package.json": "./package.json"
   },
   "bin": {
-    "matra": "./dist/cli.js"
+    "matra": "dist/cli.js"
   },
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">=22"
   },

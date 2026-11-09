@@ -13,14 +13,16 @@ A server that makes images, captions or PDFs from multilingual text shows broken
 ## Install
 
 ```sh
-npm install matra
+npm install @yeypuchi/matra
 ```
+
+The package is scoped because npm keeps the plain name `matra` back (it is too close to other package names). The command it installs is `matra`.
 
 matra never fetches fonts or files: you give it the bytes. In Node, read them from disk; in a browser, fetch them.
 
 ```ts
 import { readFile } from 'node:fs/promises';
-import { check, fit, loadFonts, measure, segment, shape, wrap } from 'matra';
+import { check, fit, loadFonts, measure, segment, shape, wrap } from '@yeypuchi/matra';
 
 // The order is the priority: each grapheme uses the first font that has all of it.
 const fonts = await loadFonts([
@@ -171,13 +173,13 @@ Line breaking uses [linebreak](https://github.com/devongovett/linebreaker), whic
 
 ## Roadmap
 
-| Version       | Adds                                                                                                             |
-| ------------- | ---------------------------------------------------------------------------------------------------------------- |
-| 0.1.0         | The core: font loading, `shape`, `check`, `segment`, `measure`, `wrap`, `fit`, and the CLI.                      |
-| 0.2.0         | `matra/captions` (SRT, WebVTT, ASS) and `matra/svg` (glyph paths for engines that do not shape complex scripts). |
-| 0.3.0         | Bidi, Thai, CJK line breaking, hyphenation, language case rules, `locl` checks.                                  |
-| `matra-print` | A separate package: HTML to a print-ready book PDF.                                                              |
-| 1.0.0         | A frozen API and finding codes under semantic versioning, and a docs site.                                       |
+| Version       | Adds                                                                                                                                 |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| 0.1.0         | The core: font loading, `shape`, `check`, `segment`, `measure`, `wrap`, `fit`, and the CLI.                                          |
+| 0.2.0         | `@yeypuchi/matra/captions` (SRT, WebVTT, ASS) and `@yeypuchi/matra/svg` (glyph paths for engines that do not shape complex scripts). |
+| 0.3.0         | Bidi, Thai, CJK line breaking, hyphenation, language case rules, `locl` checks.                                                      |
+| `matra-print` | A separate package: HTML to a print-ready book PDF.                                                                                  |
+| 1.0.0         | A frozen API and finding codes under semantic versioning, and a docs site.                                                           |
 
 ## Contributing
 
