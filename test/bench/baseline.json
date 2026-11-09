@@ -1,0 +1,20 @@
+{
+  "recorded": "2026-11-09",
+  "runtime": "node v24.22.1",
+  "cpu": "Intel(R) Xeon(R) CPU @ 2.20GHz",
+  "harfbuzz": "15.0.0",
+  "text": {
+    "file": "fixtures/text/bench-hi.txt",
+    "utf16Length": 1030
+  },
+  "results": {
+    "harfbuzz shape (reference)": {
+      "medianUs": 1600.9,
+      "p95Us": 2652.2,
+      "opsPerSec": 625
+    },
+    "check": null,
+    "wrap": null,
+    "fit": null
+  }
+}

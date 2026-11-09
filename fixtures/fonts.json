@@ -1,0 +1,84 @@
+{
+  "fonts": [
+    {
+      "file": "NotoSans-Regular.ttf",
+      "family": "Noto Sans",
+      "scripts": ["Latn", "Grek", "Cyrl"],
+      "license": "OFL-1.1",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/4cf78353cd1668040ba8efa13029cd910fcdf9e2/fonts/NotoSans/full/ttf/NotoSans-Regular.ttf",
+      "sha256": "f5f552c8c5edb61fe6efb824baf4d4de47b1a8689ab4925ff43f7bd6a4ebece5"
+    },
+    {
+      "file": "NotoSansDevanagari-Regular.ttf",
+      "family": "Noto Sans Devanagari",
+      "scripts": ["Deva"],
+      "license": "OFL-1.1",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/4cf78353cd1668040ba8efa13029cd910fcdf9e2/fonts/NotoSansDevanagari/full/ttf/NotoSansDevanagari-Regular.ttf",
+      "sha256": "573e525d9f4923d34645fe752475419f45f8dec5a8e43f3e83c5c5f43d1f2ff9"
+    },
+    {
+      "file": "NotoSansBengali-Regular.ttf",
+      "family": "Noto Sans Bengali",
+      "scripts": ["Beng"],
+      "license": "OFL-1.1",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/4cf78353cd1668040ba8efa13029cd910fcdf9e2/fonts/NotoSansBengali/full/ttf/NotoSansBengali-Regular.ttf",
+      "sha256": "67e3584988627749e701ef833e9cb1964cd17343867294cb833d3ffe2e23279f"
+    },
+    {
+      "file": "NotoSansTamil-Regular.ttf",
+      "family": "Noto Sans Tamil",
+      "scripts": ["Taml"],
+      "license": "OFL-1.1",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/4cf78353cd1668040ba8efa13029cd910fcdf9e2/fonts/NotoSansTamil/full/ttf/NotoSansTamil-Regular.ttf",
+      "sha256": "0afbc221964b6048c6d771c525be474d21b288a621dce0fafedd695cc5c98e4e"
+    },
+    {
+      "file": "NotoSansArabic-Regular.ttf",
+      "family": "Noto Sans Arabic",
+      "scripts": ["Arab"],
+      "license": "OFL-1.1",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/4cf78353cd1668040ba8efa13029cd910fcdf9e2/fonts/NotoSansArabic/full/ttf/NotoSansArabic-Regular.ttf",
+      "sha256": "7ed3fe069312aceac454f17cf613a30f95271d6ed7ce58005ed4d016bd3823d7"
+    },
+    {
+      "file": "NotoSansHebrew-Regular.ttf",
+      "family": "Noto Sans Hebrew",
+      "scripts": ["Hebr"],
+      "license": "OFL-1.1",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/4cf78353cd1668040ba8efa13029cd910fcdf9e2/fonts/NotoSansHebrew/full/ttf/NotoSansHebrew-Regular.ttf",
+      "sha256": "671951828bd5c95db818e5bb12dcea2d0c0dda00311888522be061ee6835125e"
+    },
+    {
+      "file": "NotoSansThai-Regular.ttf",
+      "family": "Noto Sans Thai",
+      "scripts": ["Thai"],
+      "license": "OFL-1.1",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/4cf78353cd1668040ba8efa13029cd910fcdf9e2/fonts/NotoSansThai/full/ttf/NotoSansThai-Regular.ttf",
+      "sha256": "2101faa471942570d506a394df7da555d15246c7814c7522c63d4fa85b0d8d88"
+    },
+    {
+      "file": "NotoSansSC-Regular.otf",
+      "family": "Noto Sans SC",
+      "scripts": ["Hans"],
+      "license": "OFL-1.1",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/Sans/SubsetOTF/SC/NotoSansSC-Regular.otf",
+      "sha256": "faa6c9df652116dde789d351359f3d7e5d2285a2b2a1f04a2d7244df706d5ea9"
+    },
+    {
+      "file": "NotoSansTC-Regular.otf",
+      "family": "Noto Sans TC",
+      "scripts": ["Hant"],
+      "license": "OFL-1.1",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/Sans/SubsetOTF/TC/NotoSansTC-Regular.otf",
+      "sha256": "5bab0cb3c1cf89dde07c4a95a4054b195afbcfe784d69d75c340780712237537"
+    },
+    {
+      "file": "NotoSansJP-Regular.otf",
+      "family": "Noto Sans JP",
+      "scripts": ["Jpan"],
+      "license": "OFL-1.1",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/f8d157532fbfaeda587e826d4cd5b21a49186f7c/Sans/SubsetOTF/JP/NotoSansJP-Regular.otf",
+      "sha256": "dff723ba59d57d136764a04b9b2d03205544f7cd785a711442d6d2d085ac5073"
+    }
+  ]
+}
