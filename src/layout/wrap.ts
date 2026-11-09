@@ -11,7 +11,7 @@ import { measureRange, neutralClusters } from './measure.ts';
 
 /** HarfBuzz GlyphFlag.UNSAFE_TO_BREAK. */
 const UNSAFE_TO_BREAK = 1;
-/** Slack for floating-point sums of advances. */
+/** Slack for floating-point sums of advances, in em. */
 const EPSILON = 1e-9;
 const STARTS_WITH_MARK = /^\p{M}/u;
 
@@ -35,40 +35,101 @@ export function wrap(text: string, options: WrapOptions): Line[] {
   const width = checkPositive(options.width, 'width');
   const lines: Line[] = [];
   for (const paragraph of hardBreakParagraphs(text)) {
-    lines.push(...wrapParagraph(stack, text, lang, size, width, paragraph).lines);
+    lines.push(
+      ...layoutParagraph(prepareParagraph(stack, text, lang, paragraph), size, width).lines,
+    );
   }
   return lines;
 }
 
-/** The lines of one paragraph, and its shaped items, which fit() reuses. */
-export interface WrappedParagraph {
-  lines: Line[];
+/**
+ * A paragraph, shaped once, with its break points. Shaping does not depend on the size, and
+ * every width grows in proportion to the size, so one prepared paragraph serves every size.
+ */
+export interface PreparedParagraph {
+  text: string;
+  start: number;
+  contentEnd: number;
+  end: number;
   items: ShapedItem[];
+  /** Widths at size 1 (in em). Undefined for an empty paragraph. */
+  layout: ParagraphLayout | undefined;
+  breaks: number[];
+  units: number[];
+  graphemes: number[];
+  graphemeSet: Set<number>;
 }
 
-/** Wrap one paragraph: [start, contentEnd, end] from hardBreakParagraphs(). */
-export function wrapParagraph(
+/** A word wider than the line: it overflows the width, or gets emergency breaks. */
+export interface Overflow {
+  start: number;
+  end: number;
+  /** In pixels. */
+  width: number;
+}
+
+/** Shape one paragraph, [start, contentEnd, end] from hardBreakParagraphs(), for layout. */
+export function prepareParagraph(
   stack: StackInternals,
   text: string,
   lang: string,
-  size: number,
-  maxWidth: number,
   [start, contentEnd, end]: readonly [number, number, number],
-): WrappedParagraph {
+): PreparedParagraph {
   if (contentEnd === start) {
-    // An empty line: only the break characters, or nothing at the end of the text.
-    const lines: Line[] = end > start ? [{ start, end, width: 0, reason: 'mandatory' }] : [];
-    return { lines, items: [] };
+    return {
+      text,
+      start,
+      contentEnd,
+      end,
+      items: [],
+      layout: undefined,
+      breaks: [],
+      units: [],
+      graphemes: [],
+      graphemeSet: new Set(),
+    };
   }
   const items = shapeItems(stack, text, lang, undefined, start, contentEnd);
-  const layout = new ParagraphLayout(stack, text, lang, size, items, start, contentEnd);
   const content = text.slice(start, contentEnd);
-  const breaks = lineBreakOpportunities(content, lang).map((b) => b.position + start);
-  const units = syllableBoundaries(content, lang).map((b) => b + start);
   const graphemes = graphemeBoundaries(content, lang).map((b) => b + start);
-  const graphemeSet = new Set(graphemes);
+  return {
+    text,
+    start,
+    contentEnd,
+    end,
+    items,
+    layout: new ParagraphLayout(stack, text, lang, items, start, contentEnd),
+    breaks: lineBreakOpportunities(content, lang).map((b) => b.position + start),
+    units: syllableBoundaries(content, lang).map((b) => b + start),
+    graphemes,
+    graphemeSet: new Set(graphemes),
+  };
+}
 
+/** Break a prepared paragraph into lines at a size, for a width in pixels. */
+export function layoutParagraph(
+  p: PreparedParagraph,
+  size: number,
+  maxWidthPx: number,
+): { lines: Line[]; overflows: Overflow[] } {
+  const { text, start, contentEnd, end, layout, breaks, units, graphemes, graphemeSet } = p;
+  if (!layout) {
+    // An empty line: only the break characters, or nothing at the end of the text.
+    const lines: Line[] = end > start ? [{ start, end, width: 0, reason: 'mandatory' }] : [];
+    return { lines, overflows: [] };
+  }
+  const maxWidth = maxWidthPx / size;
   const lines: Line[] = [];
+  const overflows: Overflow[] = [];
+  const line = (from: number, to: number, reason: Line['reason']): void => {
+    lines.push({
+      start: from,
+      end: to,
+      width: layout.width(from, Math.min(to, contentEnd)) * size,
+      reason,
+    });
+  };
+  let inWord = false; // true while the lines are pieces of one word wider than the line
   let pos = start;
   while (pos < contentEnd) {
     // The furthest break point where the line still fits.
@@ -80,13 +141,16 @@ export function wrapParagraph(
     }
     if (best !== undefined) {
       const last = best === contentEnd;
-      lines.push(layout.line(pos, last ? end : best, last ? 'mandatory' : 'opportunity'));
+      line(pos, last ? end : best, last ? 'mandatory' : 'opportunity');
       pos = best;
+      inWord = false;
       continue;
     }
     // Nothing fits: the word from pos to the next break point is wider than the line.
     const next = breaks.find((b) => b > pos) ?? contentEnd;
     const wordEnd = layout.trim(pos, next);
+    if (!inWord)
+      overflows.push({ start: pos, end: wordEnd, width: layout.width(pos, next) * size });
     const cut =
       furthestFit(layout, pos, wordEnd, units, maxWidth) ??
       furthestFit(layout, pos, wordEnd, graphemes, maxWidth) ??
@@ -94,17 +158,19 @@ export function wrapParagraph(
     if (cut === undefined) {
       // One grapheme, wider than the line: it gets the line, with its spaces.
       const last = next === contentEnd;
-      lines.push(layout.line(pos, last ? end : next, last ? 'mandatory' : 'opportunity'));
+      line(pos, last ? end : next, last ? 'mandatory' : 'opportunity');
       pos = next;
+      inWord = false;
     } else {
       // Spaces and tabs right after the cut stay on this line, where they hang.
       let stop = cut;
       while (stop < wordEnd && hangs(text.charCodeAt(stop)) && graphemeSet.has(stop + 1)) stop++;
-      lines.push(layout.line(pos, stop, 'emergency'));
+      line(pos, stop, 'emergency');
       pos = stop;
+      inWord = true;
     }
   }
-  return { lines, items };
+  return { lines, overflows };
 }
 
 /** The furthest boundary b, pos < b < wordEnd, where pos..b fits the width. */
@@ -125,17 +191,15 @@ function furthestFit(
   return best;
 }
 
-/** Widths of the parts of one shaped paragraph. */
-class ParagraphLayout {
+/** Widths of the parts of one shaped paragraph, in em (at size 1). */
+export class ParagraphLayout {
   readonly #stack: StackInternals;
   readonly #text: string;
   readonly #lang: string;
-  readonly #size: number;
   readonly #start: number;
-  readonly #end: number;
-  /** prefix[i - start]: the advance of all glyphs with a cluster before i, in pixels. */
+  /** prefix[i - start]: the advance of all glyphs with a cluster before i. */
   readonly #prefix: Float64Array;
-  /** Offsets where a cluster starts, and where HarfBuzz says a break is safe. */
+  /** Offsets where a line may start or end with the widths of the paragraph shaping. */
   readonly #safe = new Set<number>();
   readonly #reshaped = new Map<string, number>();
 
@@ -143,7 +207,6 @@ class ParagraphLayout {
     stack: StackInternals,
     text: string,
     lang: string,
-    size: number,
     items: readonly ShapedItem[],
     start: number,
     end: number,
@@ -151,15 +214,13 @@ class ParagraphLayout {
     this.#stack = stack;
     this.#text = text;
     this.#lang = lang;
-    this.#size = size;
     this.#start = start;
-    this.#end = end;
     const advance = new Float64Array(end - start);
     const unsafe = new Set<number>();
     for (const item of items) {
       const font = stack.fonts[item.font];
       if (!font) continue;
-      const scale = size / font.upem;
+      const scale = 1 / font.upem;
       const hidden = neutralClusters(text, item);
       for (const glyph of item.glyphs) {
         this.#safe.add(glyph.cluster);
@@ -188,15 +249,11 @@ class ParagraphLayout {
   /** The end of from..to without the spaces and controls at its end, which hang. */
   trim(from: number, to: number): number {
     let end = to;
-    while (end > from) {
-      const c = this.#text.charCodeAt(end - 1);
-      if (!hangs(c)) break;
-      end--;
-    }
+    while (end > from && hangs(this.#text.charCodeAt(end - 1))) end--;
     return end;
   }
 
-  /** The width of a line from..to, without its hanging end. */
+  /** The width of a line from..to, without its hanging end, in em. */
   width(from: number, to: number): number {
     const end = this.trim(from, to);
     if (end === from) return 0;
@@ -210,19 +267,15 @@ class ParagraphLayout {
     let width = this.#reshaped.get(key);
     if (width === undefined) {
       const items = shapeItems(this.#stack, this.#text, this.#lang, undefined, from, to);
-      width = measureRange(this.#stack, this.#text, items, this.#size, from, end).width;
+      width = measureRange(this.#stack, this.#text, items, 1, from, end).width;
       this.#reshaped.set(key, width);
     }
     return width;
   }
-
-  line(from: number, to: number, reason: Line['reason']): Line {
-    return { start: from, end: to, width: this.width(from, Math.min(to, this.#end)), reason };
-  }
 }
 
 /** Characters that hang at the end of a line: spaces (not no-break spaces) and controls. */
-function hangs(c: number): boolean {
+export function hangs(c: number): boolean {
   return (
     c === 0x20 ||
     c === 0x1680 ||

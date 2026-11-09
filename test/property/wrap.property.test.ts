@@ -14,8 +14,24 @@ const SIZE = 50;
 const lang = fc.constantFrom('en', 'hi', 'bn', 'ta');
 const width = fc.integer({ min: 5, max: 1500 });
 
-/** The characters that hang at the end of a line in wrap: spaces, but not no-break spaces. */
-const HANGING = /[ \u1680\u2000-\u2006\u2008-\u200a\u205f\u3000\p{Cc}\p{DI}\p{Zl}\p{Zp}]+$/u;
+/**
+ * Characters that hang at the end of a line in wrap: spaces (not no-break spaces), controls and
+ * default ignorables.
+ */
+const HANGING = /^[ \u1680\u2000-\u2006\u2008-\u200a\u205f\u3000\p{Cc}\p{DI}\p{Zl}\p{Zp}]*$/u;
+
+/**
+ * The visible part of a line: up to the end of its last grapheme with a character that does not
+ * hang. A default ignorable inside such a grapheme (a variation selector after a vowel sign)
+ * stays, because it can change how the grapheme is shaped.
+ */
+function visible(line: string, lang: string): string {
+  let end = 0;
+  for (const g of segment(line, { lang, unit: 'grapheme' })) {
+    if (!HANGING.test(line.slice(g.start, g.end))) end = g.end;
+  }
+  return line.slice(0, end);
+}
 
 describe('wrap (property)', () => {
   it('gives lines that, joined, give the input again', () => {
@@ -52,8 +68,8 @@ describe('wrap (property)', () => {
     fc.assert(
       fc.property(mixedText(40), lang, width, (text, lang, width) => {
         for (const line of wrap(text, { fonts, lang, size: SIZE, width })) {
-          const visible = text.slice(line.start, line.end).replace(HANGING, '');
-          const alone = measure(visible, { fonts, lang, size: SIZE }).width;
+          const shown = visible(text.slice(line.start, line.end), lang);
+          const alone = measure(shown, { fonts, lang, size: SIZE }).width;
           expect({ text, line, width: line.width }).toEqual({
             text,
             line,
@@ -70,8 +86,8 @@ describe('wrap (property)', () => {
       fc.property(mixedText(40), lang, width, (text, lang, width) => {
         for (const line of wrap(text, { fonts, lang, size: SIZE, width })) {
           if (line.width <= width + 1e-6) continue;
-          const visible = text.slice(line.start, line.end).replace(HANGING, '');
-          const graphemes = segment(visible, { lang, unit: 'grapheme' }).length;
+          const shown = visible(text.slice(line.start, line.end), lang);
+          const graphemes = segment(shown, { lang, unit: 'grapheme' }).length;
           expect({ text, line, graphemes }).toEqual({ text, line, graphemes: 1 });
         }
       }),
