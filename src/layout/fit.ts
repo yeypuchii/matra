@@ -98,7 +98,7 @@ export function fit(text: string, options: FitOptions): FitResult {
 
   const { size, lines, overflows } = chosen;
   const findings: Finding[] = badBreakFindings(text, lang, paragraphSpans);
-  for (const p of paragraphs) findings.push(...shapedFindings(stack, text, p.items));
+  for (const p of paragraphs) findings.push(...shapedFindings(stack, text, lang, p.items));
 
   // Width.
   let overflowX = 0;

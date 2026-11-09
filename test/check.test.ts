@@ -103,6 +103,22 @@ describe('check: broken-cluster', () => {
   });
 });
 
+describe('check: broken-cluster that HarfBuzz leaves without a dotted circle', () => {
+  it('reports both vowel signs with no base, 14 consonants apart (fault)', () => {
+    // A space and a pulli, 14 consonants, a space and the aa sign. Shaped as one text, HarfBuzz
+    // puts a dotted circle on the first broken cluster only.
+    const text = ` \u0bcd${'\u0b95'.repeat(14)} \u0bbe`;
+    expect(brief(check(text, { fonts: tamil, lang: 'ta' }))).toEqual([
+      { code: 'broken-cluster', start: 0, end: 2, font: 0 },
+      { code: 'broken-cluster', start: 16, end: 18, font: 0 },
+    ]);
+  });
+
+  it('does not report a Latin mark after a space, which is how a mark is shown alone', () => {
+    expect(check('a \u0301 b', { fonts: latin, lang: 'en' })).toEqual([]);
+  });
+});
+
 describe('check: font-fallback', () => {
   it('reports a run in a font that is not font 0', () => {
     const findings = check('Hello বাংলা', { fonts: latinBengali, lang: 'bn' });

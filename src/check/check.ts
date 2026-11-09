@@ -38,7 +38,12 @@ export function check(text: string, options: CheckOptions): Finding[] {
   const findings: Finding[] = badBreakFindings(text, lang, paragraphs);
   for (const [start, contentEnd] of paragraphs) {
     findings.push(
-      ...shapedFindings(stack, text, shapeItems(stack, text, lang, undefined, start, contentEnd)),
+      ...shapedFindings(
+        stack,
+        text,
+        lang,
+        shapeItems(stack, text, lang, undefined, start, contentEnd),
+      ),
     );
   }
   return sortFindings(findings);
@@ -89,13 +94,17 @@ export function badBreakFindings(
 export function shapedFindings(
   stack: StackInternals,
   text: string,
+  lang: string,
   items: readonly ShapedItem[],
 ): Finding[] {
   const findings: Finding[] = [];
   let fallback: Finding | undefined;
   for (const item of items) {
     const font = stack.fonts[item.font];
-    if (font) findings.push(...glyphFindings(text, item, font));
+    if (font) {
+      const found = glyphFindings(text, item, font);
+      findings.push(...found, ...missedBrokenClusters(stack, text, lang, item, found));
+    }
     if (item.font === 0) {
       fallback = undefined;
     } else if (fallback && fallback.font === item.font && fallback.end === item.start) {
@@ -174,6 +183,53 @@ export function glyphFindings(text: string, item: ShapedItem, font: FontFacts): 
     finding.message = `No font in the stack has glyphs for all of ${quote(text, finding.start, finding.end)}. Missing in font ${finding.font}: ${codes(missing)}.`;
   }
   return findings;
+}
+
+const HAS_MARK = /\p{M}/u;
+const STARTS_WITH_LETTER = /^\p{L}/u;
+
+/**
+ * Broken clusters that HarfBuzz did not mark with a dotted circle in the whole text. HarfBuzz
+ * sometimes leaves one out when the text has more than one: in a test, a second broken Tamil
+ * cluster had no dotted circle when exactly 15 or 30 syllables came between the two. So each
+ * cluster that has a mark but does not start with a letter (a space or a mark comes first) is
+ * shaped again on its own; a dotted circle there is a broken cluster.
+ */
+function missedBrokenClusters(
+  stack: StackInternals,
+  text: string,
+  lang: string,
+  item: ShapedItem,
+  found: readonly Finding[],
+): Finding[] {
+  const starts = [...new Set(item.glyphs.map((g) => g.cluster))].sort((a, b) => a - b);
+  const missed: Finding[] = [];
+  for (const [k, start] of starts.entries()) {
+    const end = starts[k + 1] ?? item.end;
+    if (found.some((f) => f.start <= start && f.end > start)) continue;
+    const cluster = text.slice(start, end);
+    if (!HAS_MARK.test(cluster) || STARTS_WITH_LETTER.test(cluster)) continue;
+    if (cluster.includes('◌')) continue;
+    const alone = shapeItems(stack, text, lang, undefined, start, end);
+    const circle = alone.some((a) => {
+      const f = stack.fonts[a.font];
+      if (!f) return false;
+      return f.dottedCircle !== undefined
+        ? a.glyphs.some((g) => g.id === f.dottedCircle)
+        : a.glyphs.some((g) => g.id === 0) &&
+            codePointsOf(text, start, end).every((cp) => isNeutral(cp) || f.hasCodePoint(cp));
+    });
+    if (circle) {
+      missed.push({
+        code: 'broken-cluster',
+        start,
+        end,
+        message: `${quote(text, start, end)} (${codes(codePointsOf(text, start, end))}) has no valid base, so it shows with a dotted circle (◌) or with no base.`,
+        font: item.font,
+      });
+    }
+  }
+  return missed;
 }
 
 /**
