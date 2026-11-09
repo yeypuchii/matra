@@ -1,0 +1,159 @@
+{
+  "lang": "de",
+  "fonts": ["NotoSans-Regular.ttf"],
+  "settings": {
+    "size": 16,
+    "widths": [80, 160, 320],
+    "box": {
+      "width": 240,
+      "height": 96
+    },
+    "minSize": 8,
+    "maxSize": 48
+  },
+  "cases": [
+    {
+      "text": "Wie nun, wenn er sich krank meldete? Das wäre aber äußerst peinlich und verdächtig, denn Gregor war während seines fünfjährigen Dienstes noch nicht einmal krank gewesen.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 9, 66.144, "opportunity"],
+          [9, 17, 61.168, "opportunity"],
+          [17, 28, 75.76, "opportunity"],
+          [28, 37, 68.72, "opportunity"],
+          [37, 46, 69.344, "opportunity"],
+          [46, 51, 34.448, "opportunity"],
+          [51, 59, 58.032, "opportunity"],
+          [59, 68, 58.704, "opportunity"],
+          [68, 72, 29.616, "opportunity"],
+          [72, 82, 79.568, "emergency"],
+          [82, 89, 47.088, "opportunity"],
+          [89, 96, 53.088, "opportunity"],
+          [96, 100, 28.16, "opportunity"],
+          [100, 108, 66.48, "opportunity"],
+          [108, 115, 47.392, "opportunity"],
+          [115, 125, 74.352, "emergency"],
+          [125, 128, 18.912, "opportunity"],
+          [128, 137, 64.848, "opportunity"],
+          [137, 148, 78.656, "opportunity"],
+          [148, 155, 51.104, "opportunity"],
+          [155, 161, 42.24, "opportunity"],
+          [161, 169, 71.008, "mandatory"]
+        ],
+        "160": [
+          [0, 17, 131.472, "opportunity"],
+          [17, 37, 148.64, "opportunity"],
+          [37, 51, 107.952, "opportunity"],
+          [51, 72, 154.672, "opportunity"],
+          [72, 89, 126.656, "opportunity"],
+          [89, 108, 156.048, "opportunity"],
+          [108, 128, 144.816, "opportunity"],
+          [128, 148, 147.664, "opportunity"],
+          [148, 161, 97.504, "opportunity"],
+          [161, 169, 71.008, "mandatory"]
+        ],
+        "320": [
+          [0, 41, 316.752, "opportunity"],
+          [41, 72, 234.304, "opportunity"],
+          [72, 108, 286.864, "opportunity"],
+          [108, 148, 296.64, "opportunity"],
+          [148, 169, 172.672, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 13.25,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 37], [37, 72], [72, 108], [108, 142], [142, 169]],
+        "findings": []
+      }
+    },
+    {
+      "text": "»Ich weiß,« sagte Gregor vor sich hin; aber so laut, daß es die Schwester hätte hören können, wagte er die Stimme nicht zu erheben.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 5, 31.136, "opportunity"],
+          [5, 12, 48.256, "opportunity"],
+          [12, 18, 41.28, "opportunity"],
+          [18, 25, 53.088, "opportunity"],
+          [25, 34, 57.936, "opportunity"],
+          [34, 44, 66.8, "opportunity"],
+          [44, 53, 54.56, "opportunity"],
+          [53, 64, 76.912, "opportunity"],
+          [64, 74, 77.024, "opportunity"],
+          [74, 80, 39.44, "opportunity"],
+          [80, 86, 44.768, "opportunity"],
+          [86, 94, 61.2, "opportunity"],
+          [94, 103, 65.984, "opportunity"],
+          [103, 107, 22.992, "opportunity"],
+          [107, 114, 57.632, "opportunity"],
+          [114, 123, 58.928, "opportunity"],
+          [123, 131, 67.584, "mandatory"]
+        ],
+        "160": [
+          [0, 18, 128.992, "opportunity"],
+          [18, 39, 147.536, "opportunity"],
+          [39, 60, 147.088, "opportunity"],
+          [60, 80, 147.776, "opportunity"],
+          [80, 94, 110.128, "opportunity"],
+          [94, 114, 154.928, "opportunity"],
+          [114, 131, 130.672, "mandatory"]
+        ],
+        "320": [
+          [0, 44, 319.296, "opportunity"],
+          [44, 86, 309.344, "opportunity"],
+          [86, 123, 283.376, "opportunity"],
+          [123, 131, 67.584, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 16,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 29], [29, 60], [60, 86], [86, 114], [114, 131]],
+        "findings": []
+      }
+    },
+    {
+      "text": "Die Straße heißt in Großbuchstaben STRASSE oder STRAẞE, und Müßiggang ist süß.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 11, 77.936, "opportunity"],
+          [11, 20, 57.088, "opportunity"],
+          [20, 28, 75.008, "emergency"],
+          [28, 35, 51.168, "opportunity"],
+          [35, 43, 64.32, "opportunity"],
+          [43, 48, 35.152, "opportunity"],
+          [48, 56, 62.384, "opportunity"],
+          [56, 60, 29.616, "opportunity"],
+          [60, 68, 77.168, "emergency"],
+          [68, 78, 67.664, "mandatory"]
+        ],
+        "160": [
+          [0, 20, 139.184, "opportunity"],
+          [20, 35, 126.176, "opportunity"],
+          [35, 48, 103.632, "opportunity"],
+          [48, 60, 96.16, "opportunity"],
+          [60, 78, 144.832, "mandatory"]
+        ],
+        "320": [
+          [0, 35, 269.52, "opportunity"],
+          [35, 74, 316.848, "opportunity"],
+          [74, 78, 31.936, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 20,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0.56,
+        "lines": [[0, 20], [20, 35], [35, 56], [56, 78]],
+        "findings": [["overflow-y", 56, 78]]
+      }
+    }
+  ]
+}

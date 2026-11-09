@@ -1,0 +1,22 @@
+{
+  "files": [
+    {
+      "file": "17.0.0/GraphemeBreakTest.txt",
+      "license": "Unicode-3.0",
+      "url": "https://www.unicode.org/Public/17.0.0/ucd/auxiliary/GraphemeBreakTest.txt",
+      "sha256": "e2d134d2c52919bace503ebb6a551c1855fe1a1faec18478c78fff254a1793ec"
+    },
+    {
+      "file": "17.0.0/WordBreakTest.txt",
+      "license": "Unicode-3.0",
+      "url": "https://www.unicode.org/Public/17.0.0/ucd/auxiliary/WordBreakTest.txt",
+      "sha256": "1de23a75f37904abc7d206239ee8d34f8fdf0fb4ab32a7174dfbabbde25419b2"
+    },
+    {
+      "file": "17.0.0/LineBreakTest.txt",
+      "license": "Unicode-3.0",
+      "url": "https://www.unicode.org/Public/17.0.0/ucd/auxiliary/LineBreakTest.txt",
+      "sha256": "e69884e0dde6a8724873f885d68c52dc14518abf9ae4ca9e2283b8773db3b752"
+    }
+  ]
+}

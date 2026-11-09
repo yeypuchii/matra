@@ -15,16 +15,18 @@ pnpm fixtures   # downloads the test fonts (about 20 MB) and checks their SHA-25
 pnpm test
 ```
 
-| Command          | What it does                                                                                                  |
-| ---------------- | ------------------------------------------------------------------------------------------------------------- |
-| `pnpm lint`      | Biome lint and format check. `pnpm lint:fix` fixes what it can.                                               |
-| `pnpm typecheck` | TypeScript, strict.                                                                                           |
-| `pnpm test`      | The Vitest suite. `pnpm test:watch` reruns it on each change.                                                 |
-| `pnpm build`     | Builds `dist/` with tsdown.                                                                                   |
-| `pnpm smoke`     | Runs the built package. Also run `bun test/smoke/smoke.mjs` and `deno run --allow-read test/smoke/smoke.mjs`. |
-| `pnpm bench`     | Times `check`, `wrap` and `fit` on a 1,000-character paragraph, and compares with `test/bench/baseline.json`. |
-| `pnpm fixtures`  | Downloads the fonts in `fixtures/fonts.json`.                                                                 |
-| `pnpm changeset` | Adds a changeset.                                                                                             |
+| Command                   | What it does                                                                                                  |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `pnpm lint`               | Biome lint and format check. `pnpm lint:fix` fixes what it can.                                               |
+| `pnpm typecheck`          | TypeScript, strict.                                                                                           |
+| `pnpm test`               | The Vitest suite. `pnpm test:watch` reruns it on each change.                                                 |
+| `pnpm build`              | Builds `dist/` with tsdown.                                                                                   |
+| `pnpm smoke`              | Runs the built package. Also run `bun test/smoke/smoke.mjs` and `deno run --allow-read test/smoke/smoke.mjs`. |
+| `pnpm bench`              | Times `check`, `wrap` and `fit` on a 1,000-character paragraph, and compares with `test/bench/baseline.json`. |
+| `pnpm fixtures`           | Downloads the fonts in `fixtures/fonts.json` and the Unicode test files in `test/conformance/files.json`.     |
+| `pnpm golden:update`      | Rewrites `test/golden/<lang>.json` from `fixtures/text/golden-<lang>.txt`. Say why in the commit message.     |
+| `pnpm conformance:update` | Rewrites the lists in `test/conformance/known-differences.json` and keeps the reasons.                        |
+| `pnpm changeset`          | Adds a changeset.                                                                                             |
 
 ## How work is done
 

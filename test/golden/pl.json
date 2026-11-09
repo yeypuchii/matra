@@ -1,0 +1,126 @@
+{
+  "lang": "pl",
+  "fonts": ["NotoSans-Regular.ttf"],
+  "settings": {
+    "size": 16,
+    "widths": [80, 160, 320],
+    "box": {
+      "width": 240,
+      "height": 96
+    },
+    "minSize": 8,
+    "maxSize": 48
+  },
+  "cases": [
+    {
+      "text": "Śród nich jedna króluje postać, jak w pogodę Lilia jezior skroń białą wznosząca nad wodę.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 10, 70.336, "opportunity"],
+          [10, 16, 41.856, "opportunity"],
+          [16, 24, 51.68, "opportunity"],
+          [24, 36, 79.712, "opportunity"],
+          [36, 45, 74.64, "opportunity"],
+          [45, 58, 74.832, "opportunity"],
+          [58, 64, 42.064, "opportunity"],
+          [64, 70, 36.048, "opportunity"],
+          [70, 78, 71.504, "emergency"],
+          [78, 84, 41.84, "opportunity"],
+          [84, 89, 45.408, "mandatory"]
+        ],
+        "160": [
+          [0, 16, 116.352, "opportunity"],
+          [16, 38, 152.288, "opportunity"],
+          [38, 58, 136.896, "opportunity"],
+          [58, 70, 82.272, "opportunity"],
+          [70, 84, 113.344, "opportunity"],
+          [84, 89, 45.408, "mandatory"]
+        ],
+        "320": [
+          [0, 38, 272.8, "opportunity"],
+          [38, 80, 307.968, "opportunity"],
+          [80, 89, 78.272, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 20,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0.16,
+        "lines": [[0, 24], [24, 45], [45, 70], [70, 89]],
+        "findings": [["overflow-y", 70, 89]]
+      }
+    },
+    {
+      "text": "Budrewicza co chodził z niedźwiedziem w zapasy: Takich mężów widziały niegdyś nasze lasy!",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 9, 77.024, "emergency"],
+          [9, 14, 30.496, "opportunity"],
+          [14, 24, 64.544, "opportunity"],
+          [24, 33, 75.968, "emergency"],
+          [33, 40, 52.368, "opportunity"],
+          [40, 48, 55.424, "opportunity"],
+          [48, 55, 46.832, "opportunity"],
+          [55, 61, 53.28, "opportunity"],
+          [61, 70, 59.456, "opportunity"],
+          [70, 78, 58.544, "opportunity"],
+          [78, 84, 43.072, "opportunity"],
+          [84, 89, 33.232, "mandatory"]
+        ],
+        "160": [
+          [0, 14, 107.52, "opportunity"],
+          [14, 24, 64.544, "opportunity"],
+          [24, 40, 128.336, "opportunity"],
+          [40, 55, 106.416, "opportunity"],
+          [55, 70, 116.896, "opportunity"],
+          [70, 89, 143.168, "mandatory"]
+        ],
+        "320": [
+          [0, 40, 308.72, "opportunity"],
+          [40, 78, 290.176, "opportunity"],
+          [78, 89, 80.464, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 20,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0.56,
+        "lines": [[0, 24], [24, 48], [48, 70], [70, 89]],
+        "findings": [["overflow-y", 70, 89]]
+      }
+    },
+    {
+      "text": "Zażółć gęślą jaźń. ZAŻÓŁĆ GĘŚLĄ JAŹŃ. Źdźbło, łódź i żółć.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 7, 47.136, "opportunity"],
+          [7, 19, 78.592, "opportunity"],
+          [19, 26, 59.04, "opportunity"],
+          [26, 32, 47.936, "opportunity"],
+          [32, 38, 40.192, "opportunity"],
+          [38, 46, 54.448, "opportunity"],
+          [46, 58, 76.912, "mandatory"]
+        ],
+        "160": [
+          [0, 19, 129.888, "opportunity"],
+          [19, 38, 155.488, "opportunity"],
+          [38, 58, 135.52, "mandatory"]
+        ],
+        "320": [[0, 38, 289.536, "opportunity"], [38, 58, 135.52, "mandatory"]]
+      },
+      "fit": {
+        "size": 24.5,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 19], [19, 38], [38, 58]],
+        "findings": []
+      }
+    }
+  ]
+}

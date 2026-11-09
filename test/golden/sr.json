@@ -1,0 +1,142 @@
+{
+  "lang": "sr",
+  "fonts": ["NotoSans-Regular.ttf"],
+  "settings": {
+    "size": 16,
+    "widths": [80, 160, 320],
+    "box": {
+      "width": 240,
+      "height": 96
+    },
+    "minSize": 8,
+    "maxSize": 48
+  },
+  "cases": [
+    {
+      "text": "Некршћу се форе усмрђеше... Уједно су овце и курјаци, здружио се Турчин с Црногорцем, оџа риче на равном Цетињу!",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 8, 70.432, "opportunity"],
+          [8, 16, 60.544, "opportunity"],
+          [16, 24, 79.408, "emergency"],
+          [24, 35, 68.704, "opportunity"],
+          [35, 45, 71.424, "opportunity"],
+          [45, 54, 63.408, "opportunity"],
+          [54, 62, 66.496, "opportunity"],
+          [62, 72, 76.176, "opportunity"],
+          [72, 74, 7.888, "opportunity"],
+          [74, 82, 76.768, "emergency"],
+          [82, 90, 57.648, "opportunity"],
+          [90, 98, 60.784, "opportunity"],
+          [98, 105, 59.264, "opportunity"],
+          [105, 112, 63.84, "mandatory"]
+        ],
+        "160": [
+          [0, 16, 135.136, "opportunity"],
+          [16, 35, 148.112, "opportunity"],
+          [35, 54, 138.992, "opportunity"],
+          [54, 74, 158.88, "opportunity"],
+          [74, 90, 134.416, "opportunity"],
+          [90, 105, 124.208, "opportunity"],
+          [105, 112, 63.84, "mandatory"]
+        ],
+        "320": [
+          [0, 38, 307.6, "opportunity"],
+          [38, 74, 281.84, "opportunity"],
+          [74, 105, 262.784, "opportunity"],
+          [105, 112, 63.84, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 16,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0.448,
+        "lines": [[0, 28], [28, 54], [54, 74], [74, 98], [98, 112]],
+        "findings": [["overflow-y", 98, 112]]
+      }
+    },
+    {
+      "text": "Бранковићу, погано кољено, тако ли се служи отачаству, тако ли се цијени поштење? О Милоше, ко ти не завиди?",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 8, 74.912, "emergency"],
+          [8, 19, 79.52, "opportunity"],
+          [19, 27, 63.856, "opportunity"],
+          [27, 38, 78.208, "opportunity"],
+          [38, 44, 47.504, "opportunity"],
+          [44, 55, 79.984, "opportunity"],
+          [55, 66, 78.208, "opportunity"],
+          [66, 73, 52.432, "opportunity"],
+          [73, 82, 79.6, "opportunity"],
+          [82, 84, 12.176, "opportunity"],
+          [84, 92, 70.752, "opportunity"],
+          [92, 101, 62.016, "opportunity"],
+          [101, 108, 62.256, "mandatory"]
+        ],
+        "160": [
+          [0, 19, 154.352, "opportunity"],
+          [19, 38, 146.224, "opportunity"],
+          [38, 55, 131.648, "opportunity"],
+          [55, 73, 134.8, "opportunity"],
+          [73, 84, 95.936, "opportunity"],
+          [84, 101, 136.928, "opportunity"],
+          [101, 108, 62.256, "mandatory"]
+        ],
+        "320": [
+          [0, 38, 304.736, "opportunity"],
+          [38, 73, 270.608, "opportunity"],
+          [73, 108, 303.44, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 17.25,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 27], [27, 55], [55, 82], [82, 108]],
+        "findings": []
+      }
+    },
+    {
+      "text": "Ђорђе и Љиљана Ћирић носе џеп пун јабука преко њиве; бгдпт у српском облику.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 8, 63.504, "opportunity"],
+          [8, 15, 67.456, "opportunity"],
+          [15, 21, 50.896, "opportunity"],
+          [21, 30, 68.24, "opportunity"],
+          [30, 41, 79.728, "opportunity"],
+          [41, 47, 45.92, "opportunity"],
+          [47, 53, 46.304, "opportunity"],
+          [53, 61, 55.184, "opportunity"],
+          [61, 69, 65.168, "opportunity"],
+          [69, 76, 58.784, "mandatory"]
+        ],
+        "160": [
+          [0, 15, 135.12, "opportunity"],
+          [15, 34, 155.12, "opportunity"],
+          [34, 53, 148.448, "opportunity"],
+          [53, 69, 124.512, "opportunity"],
+          [69, 76, 58.784, "mandatory"]
+        ],
+        "320": [
+          [0, 34, 294.4, "opportunity"],
+          [34, 69, 277.12, "opportunity"],
+          [69, 76, 58.784, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 20,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0.56,
+        "lines": [[0, 21], [21, 41], [41, 61], [61, 76]],
+        "findings": [["overflow-y", 61, 76]]
+      }
+    }
+  ]
+}

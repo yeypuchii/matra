@@ -7,3 +7,6 @@ coverage/
 
 # Downloaded by `pnpm fixtures`. Never commit font files.
 fixtures/fonts/
+
+# Downloaded by `pnpm fixtures`.
+test/conformance/data/

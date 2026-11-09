@@ -1,6 +1,7 @@
 import { readdirSync, readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import manifest from '../fixtures/fonts.json' with { type: 'json' };
+import conformance from './conformance/files.json' with { type: 'json' };
 
 const sources = readFileSync(new URL('../fixtures/SOURCES.md', import.meta.url), 'utf8');
 const textFiles = readdirSync(new URL('../fixtures/text/', import.meta.url));
@@ -24,6 +25,18 @@ describe('fixtures/fonts.json', () => {
   it('has no duplicate file names', () => {
     const names = manifest.fonts.map((f) => f.file);
     expect(new Set(names).size).toBe(names.length);
+  });
+});
+
+describe('test/conformance/files.json', () => {
+  it.each(conformance.files)('$file is a versioned Unicode file, hashed and licensed', (entry) => {
+    const match = /^(\d+\.\d+\.\d+)\/([A-Za-z]+\.txt)$/.exec(entry.file);
+    expect(match).not.toBeNull();
+    const [, version, name] = match ?? [];
+    expect(entry.url).toBe(`https://www.unicode.org/Public/${version}/ucd/auxiliary/${name}`);
+    expect(entry.sha256).toMatch(/^[0-9a-f]{64}$/);
+    expect(entry.license).toBe('Unicode-3.0');
+    expect(sources).toContain(`\`${name}\``);
   });
 });
 

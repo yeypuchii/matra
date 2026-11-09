@@ -1,0 +1,142 @@
+{
+  "lang": "tr",
+  "fonts": ["NotoSans-Regular.ttf"],
+  "settings": {
+    "size": 16,
+    "widths": [80, 160, 320],
+    "box": {
+      "width": 240,
+      "height": 96
+    },
+    "minSize": 8,
+    "maxSize": 48
+  },
+  "cases": [
+    {
+      "text": "Babamın hiddeti karşısında ne yapacağımı şaşırıyor, «bıyıklarımı keseceğime keşke kafamı keseydim!» diye içimi çekiyordum. Babam son sözünü söyledi: Beni reddetti, evden kovdu.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 8, 67.168, "opportunity"],
+          [8, 16, 52.624, "opportunity"],
+          [16, 27, 76.416, "opportunity"],
+          [27, 30, 18.912, "opportunity"],
+          [30, 38, 66.576, "emergency"],
+          [38, 41, 19.088, "opportunity"],
+          [41, 52, 65.344, "opportunity"],
+          [52, 62, 66.784, "emergency"],
+          [62, 65, 19.088, "opportunity"],
+          [65, 74, 79.888, "emergency"],
+          [74, 82, 55.984, "opportunity"],
+          [82, 89, 51.088, "opportunity"],
+          [89, 98, 75.328, "emergency"],
+          [98, 105, 43.456, "opportunity"],
+          [105, 111, 35.024, "opportunity"],
+          [111, 120, 73.232, "emergency"],
+          [120, 129, 76.56, "opportunity"],
+          [129, 133, 27.232, "opportunity"],
+          [133, 140, 54.368, "opportunity"],
+          [140, 149, 56.592, "opportunity"],
+          [149, 154, 33.44, "opportunity"],
+          [154, 164, 63.984, "opportunity"],
+          [164, 170, 45.584, "opportunity"],
+          [170, 176, 50.048, "mandatory"]
+        ],
+        "160": [
+          [0, 16, 123.952, "opportunity"],
+          [16, 30, 99.488, "opportunity"],
+          [30, 52, 155.168, "opportunity"],
+          [52, 65, 85.872, "opportunity"],
+          [65, 82, 135.872, "opportunity"],
+          [82, 100, 138.72, "opportunity"],
+          [100, 111, 70.336, "opportunity"],
+          [111, 129, 149.792, "opportunity"],
+          [129, 149, 146.512, "opportunity"],
+          [149, 170, 151.328, "opportunity"],
+          [170, 176, 50.048, "mandatory"]
+        ],
+        "320": [
+          [0, 41, 317.424, "opportunity"],
+          [41, 82, 295.408, "opportunity"],
+          [82, 123, 309.856, "opportunity"],
+          [123, 164, 309.568, "opportunity"],
+          [164, 176, 99.792, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 13.25,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 30], [30, 65], [65, 100], [100, 133], [133, 170], [170, 176]],
+        "findings": []
+      }
+    },
+    {
+      "text": "– İşte bıyıklarınızı kestirmişsiniz ya oğlum, dedi, bu sünnet-i şerif değil midir?",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 7, 40.048, "opportunity"],
+          [7, 18, 72.656, "emergency"],
+          [18, 21, 11.648, "opportunity"],
+          [21, 31, 76.16, "emergency"],
+          [31, 39, 46.96, "opportunity"],
+          [39, 46, 52.784, "opportunity"],
+          [46, 55, 61.008, "opportunity"],
+          [55, 64, 61.408, "opportunity"],
+          [64, 76, 74.048, "opportunity"],
+          [76, 82, 46.608, "mandatory"]
+        ],
+        "160": [
+          [0, 21, 128.512, "opportunity"],
+          [21, 39, 123.12, "opportunity"],
+          [39, 55, 117.952, "opportunity"],
+          [55, 76, 139.616, "opportunity"],
+          [76, 82, 46.608, "mandatory"]
+        ],
+        "320": [[0, 46, 312.736, "opportunity"], [46, 82, 255.552, "mandatory"]]
+      },
+      "fit": {
+        "size": 20,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0.56,
+        "lines": [[0, 21], [21, 46], [46, 70], [70, 82]],
+        "findings": [["overflow-y", 70, 82]]
+      }
+    },
+    {
+      "text": "İstanbul’da ılık bir gün: İĞNE ve iğne, ISPARTA ve ıspanak, Iğdır ve İzmir.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 10, 73.264, "emergency"],
+          [10, 21, 58.8, "opportunity"],
+          [21, 31, 76.192, "opportunity"],
+          [31, 40, 58.48, "opportunity"],
+          [40, 48, 61.264, "opportunity"],
+          [48, 51, 17.152, "opportunity"],
+          [51, 60, 62.304, "opportunity"],
+          [60, 69, 57.152, "opportunity"],
+          [69, 75, 40.368, "mandatory"]
+        ],
+        "160": [
+          [0, 21, 132.064, "opportunity"],
+          [21, 40, 138.832, "opportunity"],
+          [40, 60, 149.04, "opportunity"],
+          [60, 75, 101.68, "mandatory"]
+        ],
+        "320": [[0, 40, 275.056, "opportunity"], [40, 75, 254.88, "mandatory"]]
+      },
+      "fit": {
+        "size": 20.25,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 26], [26, 51], [51, 75]],
+        "findings": []
+      }
+    }
+  ]
+}

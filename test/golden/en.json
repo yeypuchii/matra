@@ -1,0 +1,301 @@
+{
+  "lang": "en",
+  "fonts": ["NotoSans-Regular.ttf"],
+  "settings": {
+    "size": 16,
+    "widths": [80, 160, 320],
+    "box": {
+      "width": 240,
+      "height": 96
+    },
+    "minSize": 8,
+    "maxSize": 48
+  },
+  "cases": [
+    {
+      "text": "So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be worth the trouble of getting up and picking the daisies, when suddenly a White Rabbit with pink eyes ran close by her.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 7, 49.2, "opportunity"],
+          [7, 11, 29.216, "opportunity"],
+          [11, 21, 78.528, "emergency"],
+          [21, 30, 57.696, "opportunity"],
+          [30, 39, 74.8, "opportunity"],
+          [39, 51, 76.256, "opportunity"],
+          [51, 62, 76.24, "opportunity"],
+          [62, 70, 50.64, "opportunity"],
+          [70, 78, 56.48, "opportunity"],
+          [78, 87, 72.48, "opportunity"],
+          [87, 97, 63.76, "opportunity"],
+          [97, 104, 47.52, "opportunity"],
+          [104, 108, 28.704, "opportunity"],
+          [108, 117, 56.224, "opportunity"],
+          [117, 125, 62.784, "opportunity"],
+          [125, 129, 24.688, "opportunity"],
+          [129, 138, 64.832, "opportunity"],
+          [138, 148, 75.68, "opportunity"],
+          [148, 156, 57.056, "opportunity"],
+          [156, 162, 40.56, "opportunity"],
+          [162, 171, 69.136, "opportunity"],
+          [171, 181, 73.376, "opportunity"],
+          [181, 192, 73.968, "opportunity"],
+          [192, 203, 78.16, "opportunity"],
+          [203, 207, 28.704, "opportunity"],
+          [207, 215, 54.048, "opportunity"],
+          [215, 219, 24.688, "opportunity"],
+          [219, 228, 55.712, "opportunity"],
+          [228, 233, 41.376, "opportunity"],
+          [233, 242, 68.432, "opportunity"],
+          [242, 250, 56.832, "opportunity"],
+          [250, 257, 48.512, "opportunity"],
+          [257, 267, 68.928, "opportunity"],
+          [267, 276, 62.864, "opportunity"],
+          [276, 285, 60.016, "opportunity"],
+          [285, 289, 27.248, "mandatory"]
+        ],
+        "160": [
+          [0, 11, 82.576, "opportunity"],
+          [11, 30, 136.224, "opportunity"],
+          [30, 51, 155.216, "opportunity"],
+          [51, 70, 131.04, "opportunity"],
+          [70, 87, 133.12, "opportunity"],
+          [87, 108, 148.304, "opportunity"],
+          [108, 129, 152.016, "opportunity"],
+          [129, 150, 157.808, "opportunity"],
+          [150, 171, 157.776, "opportunity"],
+          [171, 192, 151.504, "opportunity"],
+          [192, 207, 111.024, "opportunity"],
+          [207, 228, 142.768, "opportunity"],
+          [228, 244, 127.104, "opportunity"],
+          [244, 262, 132.896, "opportunity"],
+          [262, 282, 141.76, "opportunity"],
+          [282, 289, 49.088, "mandatory"]
+        ],
+        "320": [
+          [0, 39, 301.92, "opportunity"],
+          [39, 83, 319.056, "opportunity"],
+          [83, 125, 305.312, "opportunity"],
+          [125, 162, 275.296, "opportunity"],
+          [162, 203, 307.12, "opportunity"],
+          [203, 244, 306.896, "opportunity"],
+          [244, 285, 300.656, "opportunity"],
+          [285, 289, 27.248, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 11.25,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 43], [43, 87], [87, 129], [129, 171], [171, 215], [215, 257], [257, 289]],
+        "findings": []
+      }
+    },
+    {
+      "text": "“I’m afraid I can’t put it more clearly,” Alice replied very politely, “for I can’t understand it myself to begin with; and being so many different sizes in a day is very confusing.”",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 12, 76.32, "opportunity"],
+          [12, 24, 74.208, "opportunity"],
+          [24, 32, 54.016, "opportunity"],
+          [32, 42, 58.096, "opportunity"],
+          [42, 48, 35.184, "opportunity"],
+          [48, 56, 52.272, "opportunity"],
+          [56, 61, 31.92, "opportunity"],
+          [61, 71, 58.512, "opportunity"],
+          [71, 84, 76.24, "opportunity"],
+          [84, 93, 77.552, "emergency"],
+          [93, 105, 77.504, "opportunity"],
+          [105, 114, 62.336, "opportunity"],
+          [114, 124, 69.52, "opportunity"],
+          [124, 133, 64.224, "opportunity"],
+          [133, 138, 41.984, "opportunity"],
+          [138, 148, 64.976, "opportunity"],
+          [148, 159, 67.312, "opportunity"],
+          [159, 171, 79.008, "opportunity"],
+          [171, 181, 78.448, "emergency"],
+          [181, 182, 5.744, "mandatory"]
+        ],
+        "160": [
+          [0, 24, 154.688, "opportunity"],
+          [24, 48, 155.616, "opportunity"],
+          [48, 71, 151.024, "opportunity"],
+          [71, 84, 76.24, "opportunity"],
+          [84, 105, 155.056, "opportunity"],
+          [105, 124, 136.016, "opportunity"],
+          [124, 138, 110.368, "opportunity"],
+          [138, 159, 136.448, "opportunity"],
+          [159, 171, 79.008, "opportunity"],
+          [171, 182, 84.192, "mandatory"]
+        ],
+        "320": [
+          [0, 48, 314.464, "opportunity"],
+          [48, 84, 231.424, "opportunity"],
+          [84, 124, 295.232, "opportunity"],
+          [124, 166, 298.064, "opportunity"],
+          [166, 182, 120.272, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 13.75,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 42], [42, 84], [84, 120], [120, 157], [157, 182]],
+        "findings": []
+      }
+    },
+    {
+      "text": "Zoë and Ōtis Ó’Ríordáin met Ñandú Brøndsted at the café: naïve, coöperative, résumé in hand.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 8, 60.72, "opportunity"],
+          [8, 13, 30.064, "opportunity"],
+          [13, 24, 78.176, "opportunity"],
+          [24, 28, 29.76, "opportunity"],
+          [28, 34, 50.752, "opportunity"],
+          [34, 44, 78.4, "opportunity"],
+          [44, 51, 43.6, "opportunity"],
+          [51, 57, 35.472, "opportunity"],
+          [57, 64, 44.432, "opportunity"],
+          [64, 74, 79.2, "emergency"],
+          [74, 84, 74.32, "opportunity"],
+          [84, 92, 61.056, "mandatory"]
+        ],
+        "160": [
+          [0, 13, 94.944, "opportunity"],
+          [13, 28, 112.096, "opportunity"],
+          [28, 47, 152.224, "opportunity"],
+          [47, 64, 112.912, "opportunity"],
+          [64, 84, 153.52, "opportunity"],
+          [84, 92, 61.056, "mandatory"]
+        ],
+        "320": [
+          [0, 34, 266.112, "opportunity"],
+          [34, 77, 311.056, "opportunity"],
+          [77, 92, 122.064, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 18.25,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 24], [24, 47], [47, 77], [77, 92]],
+        "findings": []
+      }
+    },
+    {
+      "text": "The chemist 👩‍🔬 and the family 👨‍👩‍👧 waved 👋🏽 at the flag 🇳🇱 and smiled 😀.",
+      "findings": [
+        {
+          "code": "missing-glyph",
+          "start": 12,
+          "end": 17,
+          "font": 0
+        },
+        {
+          "code": "missing-glyph",
+          "start": 33,
+          "end": 41,
+          "font": 0
+        },
+        {
+          "code": "missing-glyph",
+          "start": 48,
+          "end": 52,
+          "font": 0
+        },
+        {
+          "code": "missing-glyph",
+          "start": 65,
+          "end": 69,
+          "font": 0
+        },
+        {
+          "code": "missing-glyph",
+          "start": 81,
+          "end": 83,
+          "font": 0
+        }
+      ],
+      "lines": {
+        "80": [
+          [0, 4, 27.808, "opportunity"],
+          [4, 12, 59.12, "opportunity"],
+          [12, 22, 52.064, "opportunity"],
+          [22, 33, 74.704, "opportunity"],
+          [33, 42, 28.8, "opportunity"],
+          [42, 53, 71.904, "opportunity"],
+          [53, 65, 76.208, "opportunity"],
+          [65, 74, 52.064, "opportunity"],
+          [74, 84, 67.792, "mandatory"]
+        ],
+        "160": [
+          [0, 22, 147.312, "opportunity"],
+          [22, 42, 107.664, "opportunity"],
+          [42, 65, 152.272, "opportunity"],
+          [65, 84, 124.016, "mandatory"]
+        ],
+        "320": [[0, 48, 311.84, "opportunity"], [48, 84, 227.744, "mandatory"]]
+      },
+      "fit": {
+        "size": 20.5,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 26], [26, 56], [56, 84]],
+        "findings": [
+          ["missing-glyph", 12, 17],
+          ["missing-glyph", 33, 41],
+          ["missing-glyph", 48, 52],
+          ["missing-glyph", 65, 69],
+          ["missing-glyph", 81, 83]
+        ]
+      }
+    },
+    {
+      "text": "́A mark with no base starts this line; Zoë and Anóra are written decomposed.",
+      "findings": [
+        {
+          "code": "broken-cluster",
+          "start": 0,
+          "end": 1,
+          "font": 0
+        }
+      ],
+      "lines": {
+        "80": [
+          [0, 8, 62.976, "opportunity"],
+          [8, 16, 56.096, "opportunity"],
+          [16, 21, 35.504, "opportunity"],
+          [21, 33, 74.08, "opportunity"],
+          [33, 44, 63.472, "opportunity"],
+          [44, 55, 77.92, "opportunity"],
+          [55, 59, 24.288, "opportunity"],
+          [59, 67, 53.776, "opportunity"],
+          [67, 75, 78.368, "emergency"],
+          [75, 78, 23.152, "mandatory"]
+        ],
+        "160": [
+          [0, 16, 123.232, "opportunity"],
+          [16, 39, 149.36, "opportunity"],
+          [39, 59, 138.384, "opportunity"],
+          [59, 78, 159.456, "mandatory"]
+        ],
+        "320": [[0, 44, 308.768, "opportunity"], [44, 78, 269.984, "mandatory"]]
+      },
+      "fit": {
+        "size": 20,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0.56,
+        "lines": [[0, 21], [21, 48], [48, 67], [67, 78]],
+        "findings": [["broken-cluster", 0, 1], ["overflow-y", 67, 78]]
+      }
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "lang": "uk",
+  "fonts": ["NotoSans-Regular.ttf"],
+  "settings": {
+    "size": 16,
+    "widths": [80, 160, 320],
+    "box": {
+      "width": 240,
+      "height": 96
+    },
+    "minSize": 8,
+    "maxSize": 48
+  },
+  "cases": [
+    {
+      "text": "Була тільки в сорочці, що обшита вгорі коронкою і зіп'ята на раменах, ослонювала її груди і плечі, лишаючи голими гарні, мов із слоневої кости виточені, рамена і шию. На дворі був теплий маєвий поранок.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 5, 35.296, "opportunity"],
+          [5, 14, 61.296, "opportunity"],
+          [14, 23, 63.936, "opportunity"],
+          [23, 26, 23.856, "opportunity"],
+          [26, 33, 59.632, "opportunity"],
+          [33, 39, 39.232, "opportunity"],
+          [39, 48, 77.2, "opportunity"],
+          [48, 58, 59.088, "opportunity"],
+          [58, 61, 18.72, "opportunity"],
+          [61, 70, 70.592, "opportunity"],
+          [70, 78, 76.816, "emergency"],
+          [78, 90, 78.272, "opportunity"],
+          [90, 99, 53.872, "opportunity"],
+          [99, 107, 74.512, "opportunity"],
+          [107, 114, 57.904, "opportunity"],
+          [114, 125, 78.848, "opportunity"],
+          [125, 128, 11.936, "opportunity"],
+          [128, 137, 68.08, "opportunity"],
+          [137, 143, 42.944, "opportunity"],
+          [143, 153, 72.064, "opportunity"],
+          [153, 162, 66.736, "opportunity"],
+          [162, 170, 66.256, "opportunity"],
+          [170, 180, 72.496, "opportunity"],
+          [180, 187, 55.056, "opportunity"],
+          [187, 194, 57.968, "opportunity"],
+          [194, 202, 69.936, "mandatory"]
+        ],
+        "160": [
+          [0, 14, 100.752, "opportunity"],
+          [14, 33, 155.744, "opportunity"],
+          [33, 50, 128.88, "opportunity"],
+          [50, 70, 148.432, "opportunity"],
+          [70, 90, 155.088, "opportunity"],
+          [90, 107, 132.544, "opportunity"],
+          [107, 128, 157.008, "opportunity"],
+          [128, 143, 115.184, "opportunity"],
+          [143, 162, 142.96, "opportunity"],
+          [162, 180, 142.912, "opportunity"],
+          [180, 194, 117.184, "opportunity"],
+          [194, 202, 69.936, "mandatory"]
+        ],
+        "320": [
+          [0, 39, 304.048, "opportunity"],
+          [39, 70, 238.08, "opportunity"],
+          [70, 107, 291.792, "opportunity"],
+          [107, 143, 276.352, "opportunity"],
+          [143, 180, 290.032, "opportunity"],
+          [180, 202, 191.28, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 13,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 33], [33, 70], [70, 107], [107, 143], [143, 180], [180, 202]],
+        "findings": []
+      }
+    },
+    {
+      "text": "— Котра то там година? — шепнула Целя і простягши руку, взяла з круглого столика, що стояв тут же в головах у неї, малесенький, золотий кишеньковий годинник. Хоча з досвіду знала, що будиться все о тій самій порі, але сама собі не довіряла.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 8, 65.248, "opportunity"],
+          [8, 15, 49.568, "opportunity"],
+          [15, 23, 65.664, "emergency"],
+          [23, 25, 16, "opportunity"],
+          [25, 33, 68.272, "opportunity"],
+          [33, 40, 47.568, "opportunity"],
+          [40, 48, 74.8, "emergency"],
+          [48, 56, 51.776, "opportunity"],
+          [56, 64, 56.32, "opportunity"],
+          [64, 73, 67.664, "opportunity"],
+          [73, 82, 65.36, "opportunity"],
+          [82, 91, 70.784, "opportunity"],
+          [91, 100, 61.008, "opportunity"],
+          [100, 110, 73.328, "opportunity"],
+          [110, 115, 27.056, "opportunity"],
+          [115, 123, 74.48, "emergency"],
+          [123, 128, 32.656, "opportunity"],
+          [128, 136, 63.36, "opportunity"],
+          [136, 144, 77.776, "emergency"],
+          [144, 148, 28.896, "opportunity"],
+          [148, 158, 78.208, "opportunity"],
+          [158, 165, 48.72, "opportunity"],
+          [165, 173, 58.112, "opportunity"],
+          [173, 183, 77.12, "opportunity"],
+          [183, 192, 69.184, "opportunity"],
+          [192, 202, 64.896, "opportunity"],
+          [202, 208, 43.136, "opportunity"],
+          [208, 218, 68.608, "opportunity"],
+          [218, 228, 73.04, "opportunity"],
+          [228, 231, 18.64, "opportunity"],
+          [231, 240, 73.744, "mandatory"]
+        ],
+        "160": [
+          [0, 15, 118.976, "opportunity"],
+          [15, 33, 154.096, "opportunity"],
+          [33, 50, 136.464, "opportunity"],
+          [50, 64, 98.16, "opportunity"],
+          [64, 82, 137.184, "opportunity"],
+          [82, 100, 135.952, "opportunity"],
+          [100, 115, 104.544, "opportunity"],
+          [115, 128, 107.136, "opportunity"],
+          [128, 136, 63.36, "opportunity"],
+          [136, 148, 106.672, "opportunity"],
+          [148, 165, 131.088, "opportunity"],
+          [165, 183, 139.392, "opportunity"],
+          [183, 202, 138.24, "opportunity"],
+          [202, 223, 158.032, "opportunity"],
+          [223, 240, 131.616, "mandatory"]
+        ],
+        "320": [
+          [0, 33, 277.232, "opportunity"],
+          [33, 73, 310.608, "opportunity"],
+          [73, 115, 314.176, "opportunity"],
+          [115, 148, 285.488, "opportunity"],
+          [148, 183, 274.64, "opportunity"],
+          [183, 223, 300.432, "opportunity"],
+          [223, 240, 131.616, "mandatory"]
+        ]
+      },
+      "fit": {
+        "size": 11.25,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 40], [40, 82], [82, 115], [115, 148], [148, 183], [183, 228], [228, 240]],
+        "findings": []
+      }
+    },
+    {
+      "text": "Ґудзик, їжак, Євген і м’ята: «Ґанок» — це ґанок, а «ЇЖАК» пишуть з Ї.",
+      "findings": [],
+      "lines": {
+        "80": [
+          [0, 8, 55.456, "opportunity"],
+          [8, 14, 37.632, "opportunity"],
+          [14, 22, 53.024, "opportunity"],
+          [22, 29, 44.944, "opportunity"],
+          [29, 37, 60.4, "opportunity"],
+          [37, 42, 38.768, "opportunity"],
+          [42, 51, 60.88, "opportunity"],
+          [51, 58, 55.52, "opportunity"],
+          [58, 67, 70.208, "opportunity"],
+          [67, 69, 8.832, "mandatory"]
+        ],
+        "160": [
+          [0, 22, 154.432, "opportunity"],
+          [22, 42, 152.432, "opportunity"],
+          [42, 58, 120.56, "opportunity"],
+          [58, 69, 83.2, "mandatory"]
+        ],
+        "320": [[0, 42, 311.024, "opportunity"], [42, 69, 207.92, "mandatory"]]
+      },
+      "fit": {
+        "size": 20,
+        "fits": true,
+        "overflowX": 0,
+        "overflowY": 0,
+        "lines": [[0, 22], [22, 42], [42, 65], [65, 69]],
+        "findings": []
+      }
+    }
+  ]
+}
