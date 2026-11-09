@@ -39,6 +39,23 @@ export class LoadedFont {
   hasCodePoint(codePoint: number): boolean {
     return this.glyphFor(codePoint) !== undefined;
   }
+
+  /**
+   * The vertical ink of a glyph, in font units, y up: [top, bottom]. Undefined for a glyph with
+   * no ink, such as a space.
+   */
+  inkOf(glyph: number): readonly [top: number, bottom: number] | undefined {
+    if (this.#ink.has(glyph)) return this.#ink.get(glyph);
+    const extents = this.font.glyphExtents(glyph);
+    const ink: readonly [number, number] | undefined =
+      extents && (extents.width !== 0 || extents.height !== 0)
+        ? [extents.yBearing, extents.yBearing + extents.height]
+        : undefined;
+    this.#ink.set(glyph, ink);
+    return ink;
+  }
+
+  readonly #ink = new Map<number, readonly [number, number] | undefined>();
 }
 
 export interface StackInternals {
