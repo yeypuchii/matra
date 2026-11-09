@@ -57,12 +57,16 @@ jobs:
         with:
           cache: true
       - run: pnpm install --frozen-lockfile
-      - name: Restore the test fonts
+      - name: Restore the test fonts and the Unicode test files
         uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
-          path: fixtures/fonts
-          key: fixture-fonts-${{ hashFiles('fixtures/fonts.json') }}
+          path: |
+            fixtures/fonts
+            test/conformance/data
+          key: fixtures-${{ hashFiles('fixtures/fonts.json', 'test/conformance/files.json') }}
       - run: pnpm fixtures
+      - name: Unicode conformance (the Unicode version of this Node)
+        run: node -p '`Unicode ${process.versions.unicode}, ICU ${process.versions.icu}`'
       - run: pnpm test
       - run: pnpm build
 

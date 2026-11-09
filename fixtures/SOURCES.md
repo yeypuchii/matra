@@ -28,6 +28,16 @@ Use no personal data. Invented names are fine.
 | `NotoSansTC-Regular.otf`         | Noto Sans TC         | notofonts/noto-cjk at `f8d1575`, SubsetOTF                                                     | OFL-1.1 |
 | `NotoSansJP-Regular.otf`         | Noto Sans JP         | notofonts/noto-cjk at `f8d1575`, SubsetOTF                                                     | OFL-1.1 |
 
+## Unicode test files
+
+`pnpm fixtures` also downloads the Unicode break tests into `test/conformance/data/<version>/` and checks their SHA-256. The URLs and hashes are in `test/conformance/files.json`. They are not committed.
+
+| File                    | Source                                                                                               | Licence                                                                 |
+| ----------------------- | ---------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `GraphemeBreakTest.txt` | [Unicode Character Database 17.0.0](https://www.unicode.org/Public/17.0.0/ucd/auxiliary/), auxiliary | [Unicode License v3](https://www.unicode.org/license.txt) (Unicode-3.0) |
+| `WordBreakTest.txt`     | the same                                                                                             | Unicode-3.0                                                             |
+| `LineBreakTest.txt`     | the same                                                                                             | Unicode-3.0                                                             |
+
 ## Text
 
 | File                | Content                                                                                                                  | Source                                                                                                                                                                                | Licence                                |
