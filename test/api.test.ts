@@ -21,10 +21,6 @@ describe('public API', () => {
 
 // M0: every function is a stub. Each test below is replaced when its milestone item lands.
 describe('M0 stubs', () => {
-  it('loadFonts rejects with NotImplementedError', async () => {
-    await expect(matra.loadFonts([])).rejects.toBeInstanceOf(NotImplementedError);
-  });
-
   const calls: [string, () => unknown][] = [
     ['check', () => matra.check('a', { fonts, lang: 'en' })],
     ['shape', () => matra.shape('a', { fonts, lang: 'en' })],

@@ -58,7 +58,9 @@
     "release": "changeset publish"
   },
   "dependencies": {
-    "harfbuzzjs": "1.6.4"
+    "harfbuzzjs": "1.6.4",
+    "linebreak": "2.0.0",
+    "wawoff2": "2.0.1"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.6.6",
