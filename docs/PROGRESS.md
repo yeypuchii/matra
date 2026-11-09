@@ -6,10 +6,9 @@ Where the build of matra stands, and what comes next. The spec is the build brie
 
 ## Next
 
-**M1 is done. Waiting for the owner** (brief, section 3: stop at the end of each milestone):
+**M1 is done, and 0.1.0 is published** as [`@yeypuchi/matra`](https://www.npmjs.com/package/@yeypuchi/matra) (2026-11-09, git tag `v0.1.0`). PR #2 (M1) is merged; PR #3 (the version bump, the bin path fix and the scoped name) waits for the owner to merge.
 
-1. Review and merge PR #2 (the owner approved the hi, mr, bn and ta golden files and kept linebreak on 2026-11-09).
-2. Publish 0.1.0 (`pnpm changeset version`, review, `pnpm release`).
+To publish a release: on a branch from `main`, `pnpm changeset version`, review, commit, then `npm publish` in an interactive terminal (npm asks for browser approval, which a non-interactive shell cannot give). Tag the commit `vX.Y.Z` and push the tag.
 
 Then **M2 item 1: `@yeypuchi/matra/captions`** (SRT, WebVTT, ASS), with a design note in `docs/decisions/` before the code (required from M2 on).
 
@@ -38,14 +37,14 @@ Git: work on a branch, push the branch, and open a pull request. Never push to `
 
 ## Milestones
 
-| Milestone                 | Status                              | Done when                                                         |
-| ------------------------- | ----------------------------------- | ----------------------------------------------------------------- |
-| M0 Setup                  | Done (PR #1)                        | CI passes. The owner publishes 0.0.0.                             |
-| M1 Core (0.1.0)           | Done, waiting for the owner (PR #2) | All tests pass. The owner publishes 0.1.0.                        |
-| M2 Adapters (0.2.0)       | Not started                         | The round-trip tests and the image tests pass. Owner publishes.   |
-| M3 Tier 1 breadth (0.3.0) | Not started                         | Golden tests for ar, he, th, zh-Hans, zh-Hant and ja pass.        |
-| M4 Print (`matra-print`)  | Not started                         | A sample book gives a PDF that a print vendor's file check takes. |
-| 1.0                       | Not started                         | The owner publishes 1.0.0.                                        |
+| Milestone                 | Status                            | Done when                                                         |
+| ------------------------- | --------------------------------- | ----------------------------------------------------------------- |
+| M0 Setup                  | Done (PR #1)                      | CI passes. The owner publishes 0.0.0.                             |
+| M1 Core (0.1.0)           | Done, 0.1.0 published (PR #2, #3) | All tests pass. The owner publishes 0.1.0.                        |
+| M2 Adapters (0.2.0)       | Not started                       | The round-trip tests and the image tests pass. Owner publishes.   |
+| M3 Tier 1 breadth (0.3.0) | Not started                       | Golden tests for ar, he, th, zh-Hans, zh-Hant and ja pass.        |
+| M4 Print (`matra-print`)  | Not started                       | A sample book gives a PDF that a print vendor's file check takes. |
+| 1.0                       | Not started                       | The owner publishes 1.0.0.                                        |
 
 ### M1 Core
 
