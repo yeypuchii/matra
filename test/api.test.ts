@@ -22,7 +22,6 @@ describe('public API', () => {
 // M0: every function is a stub. Each test below is replaced when its milestone item lands.
 describe('M0 stubs', () => {
   const calls: [string, () => unknown][] = [
-    ['segment', () => matra.segment('a', { lang: 'en', unit: 'grapheme' })],
     ['measure', () => matra.measure('a', { fonts, lang: 'en', size: 16 })],
     ['wrap', () => matra.wrap('a', { fonts, lang: 'en', size: 16, width: 100 })],
     [
