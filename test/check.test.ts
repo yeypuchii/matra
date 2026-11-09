@@ -44,7 +44,7 @@ describe('check: missing-glyph', () => {
 
   it('reports a grapheme that no single font has in full', () => {
     // Noto Sans has क but not U+1CD0; Noto Sans Bengali has U+1CD0 but not क.
-    const findings = check('क᳐', { fonts: latinBengali, lang: 'hi' });
+    const findings = check('क\u1cd0', { fonts: latinBengali, lang: 'hi' });
     expect(brief(findings)).toEqual([{ code: 'missing-glyph', start: 0, end: 2, font: 0 }]);
     expect(findings[0]?.message).toContain('U+1CD0');
   });
@@ -52,35 +52,35 @@ describe('check: missing-glyph', () => {
 
 describe('check: broken-cluster', () => {
   it('reports a vowel sign with no base letter', () => {
-    const findings = check('ि', { fonts: devanagari, lang: 'hi' });
+    const findings = check('\u093f', { fonts: devanagari, lang: 'hi' });
     expect(brief(findings)).toEqual([{ code: 'broken-cluster', start: 0, end: 1, font: 0 }]);
     expect(findings[0]?.message).toContain('U+093F');
   });
 
   it('reports a vowel sign after a space, with the space: they are one cluster', () => {
     // U+093F is a spacing mark, so the space and the sign are one grapheme (UAX #29 GB9a).
-    expect(brief(check('क ि', { fonts: devanagari, lang: 'hi' }))).toEqual([
+    expect(brief(check('क \u093f', { fonts: devanagari, lang: 'hi' }))).toEqual([
       { code: 'broken-cluster', start: 1, end: 3, font: 0 },
     ]);
   });
 
   it('reports a Tamil virama with no base', () => {
-    expect(brief(check('்க', { fonts: tamil, lang: 'ta' }))).toEqual([
+    expect(brief(check('\u0bcdக', { fonts: tamil, lang: 'ta' }))).toEqual([
       { code: 'broken-cluster', start: 0, end: 1, font: 0 },
     ]);
   });
 
   it('reports a combining mark at the start of the text or of a line', () => {
-    expect(brief(check('́a', { fonts: latin, lang: 'en' }))).toEqual([
+    expect(brief(check('\u0301a', { fonts: latin, lang: 'en' }))).toEqual([
       { code: 'broken-cluster', start: 0, end: 1, font: 0 },
     ]);
-    expect(brief(check('a\ńb', { fonts: latin, lang: 'en' }))).toEqual([
+    expect(brief(check('a\n\u0301b', { fonts: latin, lang: 'en' }))).toEqual([
       { code: 'broken-cluster', start: 2, end: 3, font: 0 },
     ]);
   });
 
   it('does not report a dotted circle that is in the input', () => {
-    expect(check('◌ि', { fonts: devanagari, lang: 'hi' })).toEqual([]);
+    expect(check('◌\u093f', { fonts: devanagari, lang: 'hi' })).toEqual([]);
   });
 
   it('reports glyph 0 where the font has the code points, when the font has no dotted circle', () => {
@@ -95,7 +95,7 @@ describe('check: broken-cluster', () => {
         { id: 7, cluster: 0, xAdvance: 300, yAdvance: 0, xOffset: 0, yOffset: 0, flags: 0 },
       ],
     };
-    expect(brief(glyphFindings('ि', item, font))).toEqual([
+    expect(brief(glyphFindings('\u093f', item, font))).toEqual([
       { code: 'broken-cluster', start: 0, end: 1, font: 0 },
     ]);
   });
@@ -138,7 +138,7 @@ describe('check', () => {
 
 describe('hardBreakParagraphs', () => {
   it('splits at each mandatory break, and keeps the break with the line before it', () => {
-    expect(hardBreakParagraphs('a\nb\r\nc\rd e\u0085f\u000bg\fh')).toEqual([
+    expect(hardBreakParagraphs('a\nb\r\nc\rd\u2028e\u0085f\u000bg\fh')).toEqual([
       [0, 1, 2],
       [2, 3, 5],
       [5, 6, 7],

@@ -55,7 +55,7 @@ describe('shape', () => {
 
   it('puts each grapheme in the first font that has all its code points', () => {
     // Noto Sans has क and ख, but not the Vedic tone mark U+1CD0.
-    const result = shape('क᳐ख', { fonts: latinDevanagari, lang: 'hi' });
+    const result = shape('क\u1cd0ख', { fonts: latinDevanagari, lang: 'hi' });
     expect(runs(result)).toEqual([
       { font: 1, start: 0, end: 2 },
       { font: 0, start: 2, end: 3 },
@@ -79,7 +79,7 @@ describe('shape', () => {
 
   it('ignores default-ignorable code points when it picks the font', () => {
     // Noto Sans SC has 'a' and 'b' but no ZWJ, ZWNJ or VS16.
-    for (const text of ['a‍b', 'a‌b', 'a️b']) {
+    for (const text of ['a\u200db', 'a\u200cb', 'a\ufe0fb']) {
       expect(runs(shape(text, { fonts: scLatin, lang: 'en' }))).toEqual([
         { font: 0, start: 0, end: 3 },
       ]);
@@ -151,7 +151,7 @@ describe('scriptOf', () => {
       ['1', NEUTRAL_SCRIPT],
       [' ', NEUTRAL_SCRIPT],
       ['।', NEUTRAL_SCRIPT], // the danda is Common, used by many scripts
-      ['́', NEUTRAL_SCRIPT], // Inherited
+      ['\u0301', NEUTRAL_SCRIPT], // Inherited
     ];
     for (const [char, code] of cases) {
       expect([char, scriptOf(char.codePointAt(0) as number)]).toEqual([char, code]);
