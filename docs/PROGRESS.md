@@ -6,9 +6,9 @@ Where the build of matra stands, and what comes next. The spec is the build brie
 
 ## Next
 
-**M1 item 10: the CLI.** From the brief: `matra check --font <file> [--font <file> ...] --lang <tag> (--text <string> | --file <path>) [--json]`. A file has one string on each line. Exit code 0: no findings. Exit code 1: findings. Exit code 2: usage error. The M0 stub is `src/cli/run.ts` (only `--help` and `--version` work); `test/cli.test.ts` has a test to replace.
+**M1 item 11: golden files for the M1 languages** (en, nl, de, fr, pl, tr, vi, el, ru, sr, uk, hi, mr, bn, ta). From the brief, section 7: one JSON file for each Tier 1 language in `test/golden/<lang>.json`: strings, font, lang, expected findings, lines at fixed widths, and fit results. Change a golden file only with `pnpm golden:update` and a reason in the commit message. Test text only from: short Project Gutenberg extracts (without the Gutenberg name and header), Wikisource transcriptions of authors who died more than 70 years ago (for example Premchand for hi, Tagore for bn, Subramania Bharati for ta), and hand-written edge cases (stacked Vietnamese accents, Turkish i, Dutch IJ, emoji joiner sequences, a vowel sign with no base letter, invented names with marks). Record each in `fixtures/SOURCES.md`. Golden files for scripts that only a native reader can check (bn, ta; hi, mr) need the owner's approval.
 
-Then 11 golden files, 12 README. At the end of M1: stop, report, wait for the owner. The M1 report gives the benchmark change: `pnpm bench` (the M0 baseline has only the HarfBuzz reference; compare the `× shape` column, because the machine changed).
+Then 12 README. At the end of M1: stop, report, wait for the owner. The M1 report gives the benchmark change: `pnpm bench` (the M0 baseline has only the HarfBuzz reference; compare the `× shape` column, because the machine changed).
 
 ## How work is done
 
@@ -53,9 +53,9 @@ Git: work on a branch, push the branch, and open a pull request. Never push to `
 | 6   | Unicode conformance in CI                             | Done   | `1a53d35`                        |
 | 7   | `measure`                                             | Done   | `f162e7c`                        |
 | 8   | `wrap`                                                | Done   | `389d38e`                        |
-| 9   | `fit`                                                 | Done   | (added with item 10)             |
-| 10  | CLI                                                   | Next   |                                  |
-| 11  | Golden files for the M1 languages                     |        |                                  |
+| 9   | `fit`                                                 | Done   | `e03d827`                        |
+| 10  | CLI                                                   | Done   | (added with item 11)             |
+| 11  | Golden files for the M1 languages                     | Next   |                                  |
 | 12  | README with examples in six scripts                   |        |                                  |
 
 M1 languages (Tier 1): Latin (en, nl, de, fr, pl, tr, vi), Greek (el), Cyrillic (ru, sr, uk), Devanagari (hi, mr), Bengali (bn), Tamil (ta).
