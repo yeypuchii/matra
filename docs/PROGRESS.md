@@ -8,8 +8,8 @@ Where the build of matra stands, and what comes next. The spec is the build brie
 
 **M1 is done. Waiting for the owner** (brief, section 3: stop at the end of each milestone):
 
-1. Review PR #2, and approve or correct the golden files for hi, mr, bn and ta (see Open questions).
-2. Merge PR #2, then publish 0.1.0 (`pnpm changeset version`, review, `pnpm release`).
+1. Review and merge PR #2 (the owner approved the hi, mr, bn and ta golden files and kept linebreak on 2026-11-09).
+2. Publish 0.1.0 (`pnpm changeset version`, review, `pnpm release`).
 
 Then **M2 item 1: `matra/captions`** (SRT, WebVTT, ASS), with a design note in `docs/decisions/` before the code (required from M2 on).
 
@@ -89,8 +89,10 @@ Choices the brief does not spell out. Each is also in its commit message.
 
 ## Open questions for the owner
 
-- Golden files for bn and ta (and hi, mr) need the approval of a native reader (rule above): `test/golden/{hi,mr,bn,ta}.json`, from `fixtures/text/golden-{hi,mr,bn,ta}.txt`. Check the findings and the line breaks.
-- linebreak 2.0.0 implements UAX #14 for Unicode 13 (1,023 LineBreakTest differences, mostly in Tier 2 scripts). Keep it, or plan a replacement?
+None open. Answered by the owner on 2026-11-09:
+
+- The golden files for hi, mr, bn and ta are approved.
+- linebreak stays. Its Unicode 13 differences are listed in `test/conformance/known-differences.json`; rerun `pnpm conformance:update` when linebreak or the runtime Unicode version changes.
 
 ## Owner steps (brief, section 1)
 
